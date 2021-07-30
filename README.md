@@ -10,9 +10,9 @@ StandUp Notes
 7/29/2021
 
 Max
-- Needs to do better about taking standup notes
-- Security model is confusing for P0
-- Started security badge
+- Needs to do better about taking standup notes.
+- Security model is confusing for P0.
+- Started security badge.
 
 Andrew Garmon
 
@@ -36,7 +36,7 @@ Max
 - Suggested to add order object to ERD.
 
 Jacob
-- Got feedback on ERD
+- Got feedback on ERD.
 - Can we ask clinet about relocation?
 - Need to do more research to understand relationships.
 
