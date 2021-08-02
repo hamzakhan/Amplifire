@@ -14,12 +14,12 @@ Max
 - Security model is confusing for P0.
 - Started security badge.
 
-Andrew Garmon
+Andrew G
 
 Jacob
 - Ask about Jared's example and if we are required to have fields for objects. Earlier we were told a ERD has just objects and relationships.
 
-Andrew Clark
+Andrew C
 - Trying to redo ERD to make it cleaner and more functional.
 
 Matthew
