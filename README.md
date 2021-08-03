@@ -1,6 +1,6 @@
 # Amplifire
 
-Team Nmae - The Noise
+Team Name - The Noise
 
 Team Members: Andrew Clark, Andrew Garmon, Max Chervinsky and Jacob Johnson.
 
