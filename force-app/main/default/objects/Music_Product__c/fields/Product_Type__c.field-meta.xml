@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Instrument</fullName>
+                <default>false</default>
+                <label>Instrument</label>
+            </value>
+            <value>
+                <fullName>Music book</fullName>
+                <default>false</default>
+                <label>Music book</label>
+            </value>
+            <value>
+                <fullName>Strings</fullName>
+                <default>false</default>
+                <label>Strings</label>
+            </value>
+            <value>
+                <fullName>Valve oil</fullName>
+                <default>false</default>
+                <label>Valve oil</label>
+            </value>
+            <value>
+                <fullName>Mouthpieces</fullName>
+                <default>false</default>
+                <label>Mouthpieces</label>
+            </value>
+            <value>
+                <fullName>Tuner</fullName>
+                <default>false</default>
+                <label>Tuner</label>
+            </value>
+            <value>
+                <fullName>Measuring devices</fullName>
+                <default>false</default>
+                <label>Measuring devices</label>
+            </value>
+            <value>
+                <fullName>Stands</fullName>
+                <default>false</default>
+                <label>Stands</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

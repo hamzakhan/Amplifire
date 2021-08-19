@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Woodwind_Instruments__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does the account play any woodwind instruments?</description>
+    <externalId>false</externalId>
+    <label>Woodwind Instruments</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
