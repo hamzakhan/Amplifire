@@ -61,8 +61,13 @@
         <members>*</members>
         <name>Profile</name>
     </types>
+    <types>
         <members>*</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
     </types>
     <version>52.0</version>
 </Package>
