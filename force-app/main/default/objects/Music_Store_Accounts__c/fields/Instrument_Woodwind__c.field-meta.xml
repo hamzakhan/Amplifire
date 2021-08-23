@@ -30,6 +30,31 @@
                 <default>false</default>
                 <label>Recorder</label>
             </value>
+            <value>
+                <fullName>Oboe</fullName>
+                <default>false</default>
+                <label>Oboe</label>
+            </value>
+            <value>
+                <fullName>Bassoon</fullName>
+                <default>false</default>
+                <label>Bassoon</label>
+            </value>
+            <value>
+                <fullName>Piccolo</fullName>
+                <default>false</default>
+                <label>Piccolo</label>
+            </value>
+            <value>
+                <fullName>Bansuri</fullName>
+                <default>false</default>
+                <label>Bansuri</label>
+            </value>
+            <value>
+                <fullName>Dizi</fullName>
+                <default>false</default>
+                <label>Dizi</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>4</visibleLines>

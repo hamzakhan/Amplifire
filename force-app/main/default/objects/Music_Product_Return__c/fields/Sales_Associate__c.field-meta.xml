@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Associate__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Sales Associate handling return process.</description>
+    <externalId>false</externalId>
+    <label>Sales Associate</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Music_Product_Returns</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -30,6 +30,16 @@
                 <default>false</default>
                 <label>Sitar</label>
             </value>
+            <value>
+                <fullName>Bass</fullName>
+                <default>false</default>
+                <label>Bass</label>
+            </value>
+            <value>
+                <fullName>Viola</fullName>
+                <default>false</default>
+                <label>Viola</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>4</visibleLines>

@@ -25,6 +25,31 @@
                 <default>false</default>
                 <label>French horn</label>
             </value>
+            <value>
+                <fullName>Tuba</fullName>
+                <default>false</default>
+                <label>Tuba</label>
+            </value>
+            <value>
+                <fullName>Euphonium</fullName>
+                <default>false</default>
+                <label>Euphonium</label>
+            </value>
+            <value>
+                <fullName>Cornet</fullName>
+                <default>false</default>
+                <label>Cornet</label>
+            </value>
+            <value>
+                <fullName>Flugel</fullName>
+                <default>false</default>
+                <label>Flugel</label>
+            </value>
+            <value>
+                <fullName>Horn</fullName>
+                <default>false</default>
+                <label>Horn</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>4</visibleLines>

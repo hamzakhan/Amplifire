@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Associate_Music_Product_Return</fullName>
+    <active>true</active>
+    <description>Every Music Product Return must have a Sales Associate User to handle the process.</description>
+    <errorConditionFormula>Sales_Associate__r.UserRole.Name &lt;&gt; &apos;Sales Associate Role&apos;</errorConditionFormula>
+    <errorDisplayField>Sales_Associate__c</errorDisplayField>
+    <errorMessage>You require that a user is entered for the Sales Associate field.</errorMessage>
+</ValidationRule>

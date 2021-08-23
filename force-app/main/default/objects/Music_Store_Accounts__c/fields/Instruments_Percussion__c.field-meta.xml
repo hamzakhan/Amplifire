@@ -25,6 +25,26 @@
                 <default>false</default>
                 <label>Xylophone</label>
             </value>
+            <value>
+                <fullName>Cymbal</fullName>
+                <default>false</default>
+                <label>Cymbal</label>
+            </value>
+            <value>
+                <fullName>Tambourine</fullName>
+                <default>false</default>
+                <label>Tambourine</label>
+            </value>
+            <value>
+                <fullName>Marimba</fullName>
+                <default>false</default>
+                <label>Marimba</label>
+            </value>
+            <value>
+                <fullName>Bell</fullName>
+                <default>false</default>
+                <label>Bell</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>4</visibleLines>
