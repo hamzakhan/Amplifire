@@ -44,31 +44,27 @@
     <name>CustomObject</name>
     </types>
     <types>
-    <members>*</members>
-    <name>ProfileActionOverride</name>
+        <members>*</members>
+        <name>CustomTab</name>
     </types>
     <types>
-    <members>*</members>
-    <name>CustomTab</name>
+        <members>*</members>
+        <name>HomePageComponent</name>
     </types>
     <types>
-    <members>*</members>
-    <name>HomePageComponent</name>
+        <members>*</members>
+        <name>HomePageLayout</name>
     </types>
     <types>
-    <members>*</members>
-    <name>HomePageLayout</name>
+        <members>*</members>
+        <name>Layout</name>
     </types>
     <types>
-    <members>*</members>
-    <name>Layout</name>
+        <members>*</members>
+        <name>Profile</name>
     </types>
-    <types>
-    <members>*</members>
-    <name>Profile</name>
-    </types>
-    <members>*</members>
-    <name>FlexiPage</name>
+        <members>*</members>
+        <name>FlexiPage</name>
     </types>
     <version>52.0</version>
 </Package>
