@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
 	<types>
 		<members>*</members>
 		<name>ActionLinkGroupTemplate</name>
@@ -578,6 +579,10 @@
 	</types>
 	<types>
 		<members>*</members>
+		<name>PermissionSetGroup</name>
+	</types>
+	<types>
+		<members>*</members>
 		<name>PlatformCachePartition</name>
 	</types>
 	<types>
@@ -739,4 +744,76 @@
 		<name>WorkflowRule</name>
 	</types>
 	<version>52.0</version>
+=======
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomApplication</name>
+    </types>
+
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTestSuite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>HomePageComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <version>52.0</version>
+>>>>>>> 8fa834de640dd750b0a7ce618668bf2248188074
 </Package>
