@@ -3,14 +3,6 @@
 <<<<<<< HEAD
 	<types>
 		<members>*</members>
-		<name>ActionLinkGroupTemplate</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>AnimationRule</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -52,10 +44,6 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>AuraDefinitionBundle</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>AuthProvider</name>
 	</types>
 	<types>
@@ -64,39 +52,7 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>BrandingSet</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CallCenter</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>Certificate</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>ChannelLayout</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>ChatterExtension</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CleanDataService</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>Community</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>CompactLayout</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>ConnectedApp</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -104,23 +60,11 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>CorsWhitelistOrigin</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CspTrustedSite</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>CustomApplication</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>Revature_Music_Store</members>
 		<name>CustomApplicationComponent</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CustomFeedFilter</name>
 	</types>
 	<types>
 		<members>Account.Active__c</members>
@@ -241,28 +185,6 @@
 		<name>CustomField</name>
 	</types>
 	<types>
-		<members>*</members>
-		<name>CustomHelpMenuSection</name>
-	</types>
-	<types>
-		<members>trlhdtips__tt_BaseURL</members>
-		<members>trlhdtips__tt_EnterPackageId</members>
-		<members>trlhdtips__tt_InvalidPackageId</members>
-		<members>trlhdtips__tt_ResetPasswordFail</members>
-		<members>trlhdtips__tt_ResetPasswordSuccess</members>
-		<members>trlhdtips__tt_ResetPasswordTitle</members>
-		<members>trlhdtips__tt_ResetPasswordWarning</members>
-		<name>CustomLabel</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CustomLabels</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CustomMetadata</name>
-	</types>
-	<types>
 		<members>Tremendous_Music_Product_Popularity</members>
 		<name>CustomNotificationType</name>
 	</types>
@@ -273,7 +195,6 @@
 		<members>Activity</members>
 		<members>ActivityRecurrence2Exception</members>
 		<members>AlternativePaymentMethod</members>
-		<members>ApiAnomalyEventStore</members>
 		<members>Asset</members>
 		<members>AssetAction</members>
 		<members>AssetActionSource</members>
@@ -297,7 +218,6 @@
 		<members>CollaborationGroup</members>
 		<members>CollaborationGroupMember</members>
 		<members>CommSubscription</members>
-		<members>CommSubscriptionChannelType</members>
 		<members>CommSubscriptionConsent</members>
 		<members>CommSubscriptionTiming</members>
 		<members>ConsumptionRate</members>
@@ -314,7 +234,6 @@
 		<members>Contract</members>
 		<members>ContractContactRole</members>
 		<members>ContractLineItem</members>
-		<members>CredentialStuffingEventStore</members>
 		<members>CreditMemo</members>
 		<members>CreditMemoLine</members>
 		<members>DandBCompany</members>
@@ -375,24 +294,20 @@
 		<members>PaymentAuthAdjustment</members>
 		<members>PaymentAuthorization</members>
 		<members>PaymentGateway</members>
-		<members>PaymentGroup</members>
 		<members>PaymentLineInvoice</members>
 		<members>PaymentMethod</members>
 		<members>Pricebook2</members>
 		<members>PricebookEntry</members>
 		<members>ProcessException</members>
-		<members>Product2</members>
 		<members>ProductConsumptionSchedule</members>
 		<members>PromptAction</members>
 		<members>PromptError</members>
-		<members>QuickText</members>
 		<members>QuickTextUsage</members>
 		<members>Recommendation</members>
 		<members>RecordAction</members>
 		<members>RecordMergeHistory</members>
 		<members>Refund</members>
 		<members>RefundLinePayment</members>
-		<members>ReportAnomalyEventStore</members>
 		<members>Revature_Music_Class_Roster__c</members>
 		<members>Revature_Music_Class__c</members>
 		<members>Revature_Music_Client__c</members>
@@ -402,9 +317,7 @@
 		<members>ScorecardAssociation</members>
 		<members>ScorecardMetric</members>
 		<members>ServiceContract</members>
-		<members>SessionHijackingEventStore</members>
 		<members>Site</members>
-		<members>SocialPersona</members>
 		<members>Solution</members>
 		<members>StreamActivityAccess</members>
 		<members>StreamingChannel</members>
@@ -423,63 +336,22 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>CustomObjectTranslation</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CustomPageWebLink</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>CustomPermission</name>
 	</types>
 	<types>
-		<members>*</members>
-		<name>CustomSite</name>
-	</types>
-	<types>
-		<members>*</members>
+		
+		<members>Music_Product</members>
+		<members>Music_Product_Orders</members>
+		<members>Music_Product_Returns</members>
+		<members>Music_Product_Accounts</members>
+		<members>Music_Store_Stock_Tasks</members>
+		<members>Revatures_Music_Classes</members>
+		<members>Revature_Music_Class_Rosters</members>
+		<members>Revature_Music_Clients</members>
+		<members>Revature_Music_Store_Rosters</members>
+		<members>Revature_Music_Stores</members>
+		<members>Students</members>
 		<name>CustomTab</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>DataCategoryGroup</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>DelegateGroup</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>DuplicateRule</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>EclairGeoData</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>EntitlementProcess</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>EntitlementTemplate</name>
-	</types>
-	<types>
-		<members>Case.Standard</members>
-		<name>EscalationRule</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>ExternalDataSource</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>ExternalServiceRegistration</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>FieldSet</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -503,10 +375,6 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>GlobalValueSetTranslation</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>Group</name>
 	</types>
 	<types>
@@ -519,60 +387,9 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>InstalledPackage</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>Layout</name>
 	</types>
-	<types>
-		<members>*</members>
-		<name>LightningBolt</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>LightningComponentBundle</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>LightningExperienceTheme</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>LightningMessageChannel</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>MatchingRules</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>MilestoneType</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>MyDomainDiscoverableLogin</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>NamedCredential</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>NetworkBranding</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>OauthCustomScope</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>PathAssistant</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>PaymentGatewayProvider</name>
-	</types>
+	
 	<types>
 		<members>*</members>
 		<name>PermissionSet</name>
@@ -582,28 +399,16 @@
 		<name>PermissionSetGroup</name>
 	</types>
 	<types>
-		<members>*</members>
-		<name>PlatformCachePartition</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>PlatformEventChannel</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>PlatformEventChannelMember</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>PostTemplate</name>
-	</types>
-	<types>
-		<members>*</members>
+		<members>Manager</members>
+		<members>Instructor</members>
+		<members>Technical_Support_Technician</members>
+		<members>Standard_Platform_User</members>
+		<members>Standard_User</members>
+		<members>Analytics_Cloud_Integration_User</members>
+		<members>Analytics_Cloud_Security_User</members>
+		<members>Chatter_Free_User</members>
+		<members>System_Administrator</members>
 		<name>Profile</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>ProfilePasswordPolicy</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -623,20 +428,12 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>RecommendationStrategy</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>RecordActionDeployment</name>
 	</types>
 	<types>
 		<members>Metric.Completion</members>
 		<members>Metric.Progress</members>
 		<name>RecordType</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>RedirectWhitelistUrl</name>
 	</types>
 	<types>
 		<members>unfiled$public/flow_screen_prebuilt_report</members>
@@ -649,14 +446,6 @@
 	<types>
 		<members>*</members>
 		<name>Role</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>SamlSsoConfig</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>Scontrol</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -676,31 +465,7 @@
 	</types>
 	<types>
 		<members>*</members>
-		<name>SiteDotCom</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>StandardValueSetTranslation</name>
-	</types>
-	<types>
-		<members>*</members>
 		<name>StaticResource</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>SynonymDictionary</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>TopicsForObjects</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>TransactionSecurityPolicy</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>Translations</name>
 	</types>
 	<types>
 		<members>Music_Product_Order__c.Order_Late_Date_Validation_Rule</members>
@@ -708,13 +473,6 @@
 		<members>Order.Order_Late_Date_Validation_Rule</members>
 		<members>User.NoUsernameChangesAllowed</members>
 		<name>ValidationRule</name>
-	</types>
-	<types>
-		<members>Account.Billing</members>
-		<members>Campaign.ViewCampaignInfluenceReport</members>
-		<members>Case.UpsellCrosssellOpportunity</members>
-		<members>Opportunity.DeliveryStatus</members>
-		<name>WebLink</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -744,76 +502,6 @@
 		<name>WorkflowRule</name>
 	</types>
 	<version>52.0</version>
-=======
-    <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomApplication</name>
-    </types>
 
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>StaticResource</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>HomePageComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>HomePageLayout</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Layout</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Profile</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>FlexiPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomField</name>
-    </types>
-    <version>52.0</version>
->>>>>>> 8fa834de640dd750b0a7ce618668bf2248188074
+
 </Package>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Late_Date_Validation_Rule</fullName>
+    <active>true</active>
+    <description>Order Late Date must be at least a week after the order date.</description>
+    <errorConditionFormula>Order_Late_Date__c  &lt;=   EffectiveDate + 7</errorConditionFormula>
+    <errorMessage>Order Late Date must be a minimum of seven days after the order start date.</errorMessage>
+</ValidationRule>
