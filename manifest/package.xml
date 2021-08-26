@@ -33,9 +33,32 @@
         <name>StaticResource</name>
     </types>
     <types>
-    <members>Account</members>
-    <members>*</members>
-    <name>CustomObject</name>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>HomePageComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlexiPage</name>
     </types>
     <version>52.0</version>
 </Package>
