@@ -48,5 +48,13 @@
         <members>*</members>
         <name>FlexiPage</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Quick_Order_Creation_Flow</members>
+        <name>Flow</name>
+    </types>
     <version>52.0</version>
 </Package>
