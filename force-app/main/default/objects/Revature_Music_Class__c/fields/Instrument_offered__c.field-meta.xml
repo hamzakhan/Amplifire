@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instrument_offered__c</fullName>
+    <externalId>false</externalId>
+    <label>Instrument offered</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Trumpet</fullName>
+                <default>false</default>
+                <label>Trumpet</label>
+            </value>
+            <value>
+                <fullName>Saxophone</fullName>
+                <default>false</default>
+                <label>Saxophone</label>
+            </value>
+            <value>
+                <fullName>Piano</fullName>
+                <default>false</default>
+                <label>Piano</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

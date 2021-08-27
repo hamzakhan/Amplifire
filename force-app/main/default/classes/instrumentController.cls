@@ -4,8 +4,6 @@ public with sharing class instrumentController {
     public Music_Product__c currentProduct {get; set; }
     public transient Integer totalOrders;
     public List<Revature_Music_Class__c> classes = new List<Revature_Music_Class__c>();
-    public integer numberOfOrders;
-    public integer totalSupply;
 
     //Gets the ID of the passed object and finds the instrument of that ID
     public instrumentController() {
@@ -45,7 +43,7 @@ public with sharing class instrumentController {
     //Needs to have instruments added to classes by Max
     public List<Revature_Music_Class__c> getClasses(){
 
-        this.classes = [SELECT name FROM Revature_Music_Class__c WHERE Revature_Music_Class__c.instruments INCLUDES(:this.currentProduct.name)];
+        this.classes = [SELECT name FROM Revature_Music_Class__c WHERE Revature_Music_Class__c.instrument_offered__c = :this.currentProduct.name];
         return classes;
 
     }

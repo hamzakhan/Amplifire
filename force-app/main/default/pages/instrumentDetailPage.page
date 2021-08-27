@@ -1,38 +1,38 @@
-<apex:page >
+<apex:page controller='instrumentController'>
     
     <head>
     </head>
-    <body style='background: black;'>
+    <body>
         
         <div class='align-center'>
             <!-- Image will go here -->
-            <apex:image url="{!URLFOR($Resource.instrumentImages, '{!Music_Product_Order__c.name}.png')}"/>
+            <!--<apex:image url="{!URLFOR($Resource.instrumentImages, '{!Music_Product_Order__c.name}.png')}"/> -->
         </div>
 
         <!--Title goes here -->
-        <apex:outputText value='{!Music_Product_Order__c.name}' />
+        <apex:outputText value='{!currentProduct.name}' style='margin-left: 45%; margin-right: 45%;'/>
 
         <!--Description goes here -->
-        <apex:outputText value='{!Music_Product_Order__c.Description}'>
+        <apex:outputText value='{!currentProduct.Description__c}' />
         
         <!--Horizontal alignment of classes and number of orders -->
         <div class='HorizontalComponents' style='display: flex;'>
-            <div class='Classes' style='width: 50%; float: left; background: blue;'>
+            <div class='Classes' style='width: 50%; float: left;'>
                <p>
                    Test
                 </p>
 
-                <!--Add link information here>
-                <apex:outputLink>
+                <!--Add link information here-->
+                
             </div>
             
-            <!--Used for the number of orders of this product -->
-            <div class='NumOrders' style='flex-grow: 1; background: red;'>
+            <!--Used for the number of orders of this product-->
+            <div class='NumOrders' style='flex-grow: 1;'>
 				<p>
                    Total number of orders goes here
                 </p>
 
-                <apex:outputText value="Total number of orders with this instrument: {!numberOfOrders}" />
+                <apex:outputText value="Total number of orders with this instrument: {!totalOrders}" />
                 <p>
                    Estimated quantity goes here
                 </p>
