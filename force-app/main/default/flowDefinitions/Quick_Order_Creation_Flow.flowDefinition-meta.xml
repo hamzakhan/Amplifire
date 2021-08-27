@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
-    <activeVersionNumber>12</activeVersionNumber>
-    <description>A quick way for users to create an order for a Music Product.</description>
-    <masterLabel>Quick Order Creation Flow</masterLabel>
-</FlowDefinition>
