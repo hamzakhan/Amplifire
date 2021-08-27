@@ -6,7 +6,7 @@
     <referenceTo>Revature_Music_Store__c</referenceTo>
     <relationshipLabel>Revature Music Store Rosters</relationshipLabel>
     <relationshipName>Revature_Music_Store_Rosters</relationshipName>
-    <relationshipOrder>0</relationshipOrder>
+    <relationshipOrder>1</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
