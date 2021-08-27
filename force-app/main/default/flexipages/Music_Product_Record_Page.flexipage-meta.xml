@@ -66,9 +66,9 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Estimated_Quantity__c</fieldItem>
+                <fieldItem>Record.Revature_Music_Store__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -77,7 +77,7 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Product_Code__c</fieldItem>
+                <fieldItem>Record.Product_Type__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -104,9 +104,19 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.OwnerId</fieldItem>
+                <fieldItem>Record.Estimated_Quantity__c</fieldItem>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Price__c</fieldItem>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Image__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -115,16 +125,7 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Product_Type__c</fieldItem>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Revature_Music_Store__c</fieldItem>
+                <fieldItem>Record.Product_Code__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <name>Facet-0f4baa54-93ed-406e-96dd-a36b9c78eddc</name>
@@ -183,6 +184,15 @@
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.OwnerId</fieldItem>
+            </fieldInstance>
+        </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>

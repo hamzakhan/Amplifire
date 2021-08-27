@@ -27,7 +27,17 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Music_Product__c.Image__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Music_Product__c.Instrument_Sub_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Music_Product__c.Price__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

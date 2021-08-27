@@ -1,9 +1,11 @@
-<apex:page Controller="FilterTable">
+<apex:page Controller="FilterTable"  >
+
 <apex:PageBlock >
 <apex:form >
+
 <h1>Choose the instrument type to search for:</h1><br></br>
 <apex:pageBlock >
-<apex:SelectList value="{!type}">
+<apex:SelectList value="{!type}" style="font-size=14px">
     <apex:selectOptions value="{!opt}"></apex:selectOptions>
 </apex:SelectList>
     <br></br>
@@ -17,9 +19,15 @@
 </apex:form>
 
 <apex:pageBlockTable value="{!filter}" var="inst">
+            <apex:column >
+                <apex:variable var="img" value="Products/images/{!inst.Image__c}"/>
+                <apex:image url="{!URLFOR($Resource.products, img)}" style="max-wiidth:240px;max-height:240px;"/>
+            </apex:column>
             <apex:column value="{!inst.name}"/>
-            <apex:column value="{!inst.Estimated_Quantity__c}"/>
+            
             <apex:column value="{!inst.Instrument_Sub_Type__c}"/> 
+            <apex:column value="{!inst.Price__c}"/>
+            <apex:column value="{!inst.Estimated_Quantity__c}"/>
 </apex:pageBlockTable>
 </apex:PageBlock>
   

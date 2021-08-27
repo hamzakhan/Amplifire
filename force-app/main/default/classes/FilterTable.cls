@@ -23,7 +23,7 @@ public class FilterTable {
     }
 	public void setFilter()
     {
-        list<Music_Product__c> records=[SELECT name, estimated_quantity__c, instrument_sub_type__c 
+        list<Music_Product__c> records=[SELECT name, image__c, price__c, estimated_quantity__c, instrument_sub_type__c 
                                         FROM Music_Product__c WHERE Instrument_Sub_Type__c=:type]; 
 
         this.filter=records;
