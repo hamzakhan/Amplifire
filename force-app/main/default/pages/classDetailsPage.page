@@ -1,2 +1,2 @@
-<apex:page controller= "rmsClasses">
+<apex:page controller= "rmsClassesController">
 </apex:page>
