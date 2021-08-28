@@ -1,2 +1,28 @@
 <apex:page controller="rmsClassesController">
+    <head>
+        <title>
+            <p>Class Information Page</p>
+            <p>{!currentProduct.name} details</p>
+        </title>
+
+        <body>
+
+            <div class='align-center' style='text-align:center;'>
+                <!--Image will go here-->
+                <apex:outputText value='{!currentClass.Name}'style='font-weight:bold;'/>
+                <apex:outputText value='{!currentClass.Students_currently_in_Class__c}'/>
+            </div>
+
+            <!---->
+            <!--Space for Formatting-->
+            <div id ="Spaces">
+                <br />
+                <br />
+            </div>
+
+            
+
+        </body>
+        
+    </head>
 </apex:page>
