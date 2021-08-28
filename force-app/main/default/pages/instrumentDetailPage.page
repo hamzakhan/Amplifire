@@ -5,8 +5,8 @@
     </head>
     <body>
         
+        <!--Centered image, title and description -->
         <div class='align-center' style='text-align:center;'>
-            <!-- Image will go here -->
             <apex:variable var="img" value="Products/images/{!currentProduct.Image__c}"/>
             <apex:image url="{!URLFOR($Resource.products, img)}" style="max-wiidth:240px;max-height:240px;"/> <br />
             <apex:outputText value='{!currentProduct.name}' style='font-weight:bold;'/><br />
@@ -19,7 +19,7 @@
             <br />
         </div>
         
-        <!--Horizontal alignment of classes and number of orders -->
+        <!--Horizontal alignment of classes, number of orders and stock-->
         <div class='HorizontalComponents' style='display: flex;'>
             <div class='Classes' style='width: 50%; float: left;'>
                
@@ -28,10 +28,7 @@
                    <li>
                        <apex:outputText value="{!class.name}"/>
                    </li>
-               </apex:repeat>
-
-                <!--Add link information here-->
-                
+               </apex:repeat>                
             </div>
             
             <!--Used for the number of orders of this product-->
