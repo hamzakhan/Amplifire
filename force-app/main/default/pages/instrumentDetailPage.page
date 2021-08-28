@@ -7,7 +7,8 @@
         
         <div class='align-center' style='text-align:center;'>
             <!-- Image will go here -->
-            <!--<apex:image url="{!URLFOR($Resource.instrumentImages, '{!Music_Product_Order__c.name}.png')}"/> -->
+            <apex:variable var="img" value="Products/images/{!currentProduct.Image__c}"/>
+            <apex:image url="{!URLFOR($Resource.products, img)}" style="max-wiidth:240px;max-height:240px;"/> <br />
             <apex:outputText value='{!currentProduct.name}' style='font-weight:bold;'/><br />
             <apex:outputText value='{!currentProduct.Description__c}' />
         </div>

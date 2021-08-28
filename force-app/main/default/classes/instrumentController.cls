@@ -8,7 +8,7 @@ public with sharing class instrumentController {
     //Gets the ID of the passed object and finds the instrument of that ID
     public instrumentController() {
         ID instrumentID = ApexPages.CurrentPage().getParameters().get('id');
-        this.currentProduct = [SELECT name, description__c, Estimated_Quantity__c FROM Music_Product__c WHERE id=:instrumentID LIMIT 1];
+        this.currentProduct = [SELECT name, description__c, Estimated_Quantity__c, Image__c FROM Music_Product__c WHERE id=:instrumentID LIMIT 1];
     }
 
     //Done
