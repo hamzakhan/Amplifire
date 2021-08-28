@@ -1,26 +1,33 @@
 <apex:page controller='instrumentController'>
     
     <head>
+        <title>{!currentProduct.name} details</title>
     </head>
     <body>
         
-        <div class='align-center'>
+        <div class='align-center' style='text-align:center;'>
             <!-- Image will go here -->
             <!--<apex:image url="{!URLFOR($Resource.instrumentImages, '{!Music_Product_Order__c.name}.png')}"/> -->
+            <apex:outputText value='{!currentProduct.name}' style='font-weight:bold;'/><br />
+            <apex:outputText value='{!currentProduct.Description__c}' />
         </div>
 
-        <!--Title goes here -->
-        <apex:outputText value='{!currentProduct.name}' style='margin-left: 45%; margin-right: 45%;'/>
-
-        <!--Description goes here -->
-        <apex:outputText value='{!currentProduct.Description__c}' />
+        <!--Space for formatting-->
+        <div id="Spaces">
+            <br />
+            <br />
+        </div>
         
         <!--Horizontal alignment of classes and number of orders -->
         <div class='HorizontalComponents' style='display: flex;'>
             <div class='Classes' style='width: 50%; float: left;'>
-               <p>
-                   Test
-                </p>
+               
+               <apex:outputText value="Offered classes with this instrument" />
+                <apex:repeat value="{!classes}" var="class">
+                   <li>
+                       <apex:outputText value="{!class.name}"/>
+                   </li>
+               </apex:repeat>
 
                 <!--Add link information here-->
                 
@@ -28,14 +35,8 @@
             
             <!--Used for the number of orders of this product-->
             <div class='NumOrders' style='flex-grow: 1;'>
-				<p>
-                   Total number of orders goes here
-                </p>
 
-                <apex:outputText value="Total number of orders with this instrument: {!totalOrders}" />
-                <p>
-                   Estimated quantity goes here
-                </p>
+                <apex:outputText value="Total number of orders with this instrument: {!totalOrders}" style='text-align: right;' /> <br />
 
                 <apex:outputText value="Total amount of stock of this instrument: {!totalSupply}" />
 
