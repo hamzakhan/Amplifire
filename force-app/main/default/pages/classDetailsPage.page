@@ -2,18 +2,18 @@
     <head>
         <title>
             <p>Class Information Page</p>
-            <p>{!currentProduct.name} details</p>
+            <p>{!currentClass.name} details</p>
         </title>
 
         <body>
 
-            <div class='align-center' style='text-align:center;'>
+            <div class="align-center" style="text-align:center;">
                 <!--Image for the class will go here-->
-                <apex:outputText value='{!currentClass.Name}'style='font-weight:bold;'/>
-                <apex:outputText value='{!currentClass.Students_currently_in_Class__c}'/>
-                <apex:outputText value='{!currentClass.Instructor__c}'/>
-                <apex:outputText value='{!currentClass.Assistant_Instructor__c}'/>
-                <apex:outputText value='{!currentClass.Revature_Music_Class_Roster__c}'/>
+                <apex:outputText value="{!currentClass.Name}" style="font-weight:bold;"/>
+                <apex:outputText value="{!currentClass.Students_currently_in_Class__c}"/>
+                <apex:outputText value="{!currentClass.Instructor__c}"/>
+                <apex:outputText value="{!currentClass.Assistant_Instructor__c}"/>
+                <apex:outputText value="{!currentClass.Revature_Music_Class_Roster__c}"/>
                 
             </div>
 
