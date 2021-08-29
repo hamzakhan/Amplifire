@@ -2,7 +2,7 @@ public with sharing class rmsClassesController {
 
     //variable declarations
     public Revature_Music_Class__c currentClass {get; set;}
-    public List<User> currentInstructor = new List<User>();
+    public User currentInstructor = new User();
    
     
 
@@ -18,7 +18,7 @@ public with sharing class rmsClassesController {
     }
 
     public string getInstructor(){
-        this.currentInstructor = [SELECT Name from User WHERE User.Id =:this.currentClass.Instructor__c];
+        this.currentInstructor = [SELECT Name, ID FROM User WHERE Id =:this.currentClass.Instructor__c LIMIT 1 ];
         return currentInstructor.Name;
         //return this.currentClass.Instructor__c.Name;
     }
