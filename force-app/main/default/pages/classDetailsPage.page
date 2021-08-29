@@ -1,9 +1,6 @@
 <apex:page controller="rmsClassesController">
     <head>
-        <title>
-            <p>Class Information Page</p>
-            <p>{!currentClass.name} details</p>
-        </title>
+        <title>Class Information Page</title>
 
         <body>
 
@@ -15,11 +12,11 @@
                 <br/>
                 <apex:outputText value="{!currentClass.Students_currently_in_Class__c}"/>
                 <br/>
-                <apex:outputText value="{!currentClass.Instructor__c}"/>
+                <apex:outputText value="{!currentInstructor.Name}"/>
                 <br/>
-                <apex:outputText value="{!currentClass.Assistant_Instructor__c}"/>
+                <apex:outputText value="{!currentAssistant.Name}"/>
                 <br/>
-                <apex:outputText value="{!currentClass.Revature_Music_Class_Roster__c}"/>
+                <apex:outputText value="{!currentClassRosterName}"/>
                 
             </div>
 
