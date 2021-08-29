@@ -16,7 +16,7 @@ public with sharing class rmsClassesController {
     }
 
     public string getInstructor(){
-        return this.currentClass.Instructor__c;
+        return this.currentClass.Instructor__c.Name;
     }
 
     public Decimal getStudentsInClass(){
@@ -24,11 +24,11 @@ public with sharing class rmsClassesController {
     } 
 
     public string getAssistantInstructor(){
-        return this.currentClass.Assistant_Instructor__c;
+        return this.currentClass.Assistant_Instructor__c.Name;
     }
 
     public string getClassRoster(){
-        return this.currentClass.Revature_Music_Class_Roster__c;
+        return this.currentClass.Revature_Music_Class_Roster__c.Name;
     }
 
     public string getClassAddress(){
