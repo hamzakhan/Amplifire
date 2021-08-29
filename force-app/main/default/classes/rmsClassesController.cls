@@ -2,15 +2,15 @@ public with sharing class rmsClassesController {
 
     //variable declarations
     public Revature_Music_Class__c currentClass {get; set;}
+    public List<User> currentInstructor = new List<User>();
+   
     
 
     //Gets the ID of the objects passed and finds the Id of the corresponding class
     public rmsClassesController(){
         ID classID = ApexPages.CurrentPage().getParameters().get('id');
         this.currentClass = [SELECT Name, Instructor__c, Revature_Music_Class_Roster__c, Students_currently_in_Class__c, Assistant_Instructor__c, Instruments_Offered__c, Class_address__c FROM Revature_Music_Class__c WHERE id=:classID LIMIT 1];
-        this.currentInstructor = [SELECT Name, ID FROM User WHERE ID = Instructor__c];
-        this.currentAssistant = [SELECT Name, ID FROM User WHERE ID = Assistant_Instructor__c];
-        this.currentClassRoster = [SELECT Name, ID FROM Revature_Music_Class_Roster__c WHERE ID = Revature_Music_Class_Roster__c];
+        
     }
 
     public string getName(){
@@ -18,7 +18,9 @@ public with sharing class rmsClassesController {
     }
 
     public string getInstructor(){
-        return this.currentInstructor.Name;
+        this.currentInstructor = [SELECT Name from User WHERE User.Id =:this.currentClass.Instructor__c];
+        return currentInstructor.Name;
+        //return this.currentClass.Instructor__c.Name;
     }
 
     public Decimal getStudentsInClass(){
@@ -26,11 +28,11 @@ public with sharing class rmsClassesController {
     } 
 
     public string getAssistantInstructor(){
-        return this.currentAssistant.Name;
+        return this.currentClass.Assistant_Instructor__c;
     }
 
     public string getClassRoster(){
-        return this.currentClassRoster;
+        return this.currentClass.Revature_Music_Class_Roster__c;
     }
 
     public string getClassAddress(){
