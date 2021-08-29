@@ -17,7 +17,7 @@ public with sharing class rmsClassesController {
         return this.currentClass.Name;
     }
 
-    public string getInstructor(){
+    public string getcurrentInstructor(){
         this.currentInstructor = [SELECT Name, ID FROM User WHERE Id =:this.currentClass.Instructor__c LIMIT 1 ];
         return currentInstructor.Name;
         //return this.currentClass.Instructor__c.Name;
