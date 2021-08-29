@@ -2,26 +2,28 @@
 public class instrumentControllerTests{
 
     string instrumentName = 'Saxophone';
-    string instrumentDescription = 'This is a test description';
-    integer numberOfOrders = 30;
+    static string instrumentDescription = 'This is a test description';
+    static integer numberOfOrders = 30;
+    static integer totalSupply = 10;
+    static Id testID;
+
+    
 
     @TestSetup
     static void makeData(){
         
-        integer numberOfOrders = 30;
-        string instrumentName = 'Saxophone';
-        Test.setCurrentPage(new Pagereference('instrumentController'));
-        
+        string instrumentName = 'Saxophone';        
 
         Music_Product__c myInstrument = new Music_Product__c();
         myInstrument.name = instrumentName;
         Music_Product__c unusedInstrument = new Music_Product__c();
-        myInstrument.name = 'Trumpet';
-        myInstrument.Estimated_Quantity__c = 10;
+        unusedInstrument.name = 'Trumpet';
+        myInstrument.Estimated_Quantity__c = totalSupply;
+        unusedInstrument.Estimated_Quantity__c = 20;
+        myInstrument.Description__c = instrumentDescription;
 
         INSERT myInstrument;
-
-        ApexPages.currentPage().getParameters().put('id', myInstrument.id);
+        INSERT unusedInstrument;
 
         List<Music_Product_Order__c> sampleOrders = new List<Music_Product_Order__c>();
 
@@ -43,11 +45,18 @@ public class instrumentControllerTests{
     @isTest
     public static void instrumentController_getName(){
 
+        Test.startTest();
         string instrumentName = 'Saxophone';
+        Music_Product__c testProd = [SELECT id FROM Music_Product__c WHERE name=:instrumentName LIMIT 1];
+        
         //Need to figure out how to pass in the instrument id here
-        instrumentController ic = new instrumentController();
+        PageReference pageRef = Page.instrumentDetailPage;
+        Test.setCurrentPage(pageRef);
+        ApexPages.currentPage().getParameters().put('id', testProd.id);
+        
+        instrumentController insCon = new instrumentController();
 
-        string returnedName = ic.getName();
+        string returnedName = insCon.getName();
         system.assertEquals(instrumentName,  returnedName);
 
     }
@@ -55,23 +64,90 @@ public class instrumentControllerTests{
     @isTest
     public static void instrumentController_getDescription(){
 
+        Test.startTest();
+        string instrumentName = 'Saxophone';
+        Music_Product__c testProd = [SELECT id FROM Music_Product__c WHERE name=:instrumentName LIMIT 1];
+        
+        //Need to figure out how to pass in the instrument id here
+        PageReference pageRef = Page.instrumentDetailPage;
+        Test.setCurrentPage(pageRef);
+        ApexPages.currentPage().getParameters().put('id', testProd.id);
+
         string instrumentDescription = 'This is a test description';
+        instrumentController insCon = new instrumentController();
 
         //Need to figure out how to pass in the instrument id here
-        //string retunedDescription = instrumentController.getName();
-        //system.assertEquals(instrumentDescription,  retunedDescription);
+        string retunedDescription = insCon.getDescription();
+        system.debug('Retruned description: ' + retunedDescription);
+        system.assertEquals(instrumentDescription,  retunedDescription);
+        Test.stopTest();
 
     }
 
     @isTest
     public static void instrumentController_getNumberOfOrders(){
 
+        Test.startTest();
         string instrumentName = 'Saxophone';
-        integer numberOfOrders = 30;
+        Music_Product__c testProd = [SELECT id FROM Music_Product__c WHERE name=:instrumentName LIMIT 1];
+        
+        //Need to figure out how to pass in the instrument id here
+        PageReference pageRef = Page.instrumentDetailPage;
+        Test.setCurrentPage(pageRef);
+        ApexPages.currentPage().getParameters().put('id', testProd.id);
 
-        integer returnedNumOrders = [SELECT COUNT() FROM Music_Product_Order__c WHERE Music_Product_Purchased_1__c = :instrumentName OR Music_Product_Purchased_2__c = :instrumentName OR Music_Product_Purchased_3__c = :instrumentName];
+        instrumentController insCon = new instrumentController();
+
+        integer returnedNumOrders = insCon.getTotalOrders();
         system.assertEquals(numberOfOrders, returnedNumOrders);
     }
 
+    @isTest
+    public static void instrumentController_getClasses(){
+
+        Test.startTest();
+        string instrumentName = 'Saxophone';
+        Music_Product__c testProd = [SELECT id, name FROM Music_Product__c WHERE name=:instrumentName LIMIT 1];
+        
+        //Need to figure out how to pass in the instrument id here
+        PageReference pageRef = Page.instrumentDetailPage;
+        Test.setCurrentPage(pageRef);
+        ApexPages.currentPage().getParameters().put('id', testProd.id);
+
+        List<Revature_Music_Class__c> newClasses = new List<Revature_Music_Class__c>();
+
+        for(integer i = 0; i < numberOfOrders; i++){
+
+            Revature_Music_Class__c newClass = new Revature_Music_Class__c();
+            newClass.name = 'Test class ' + i;
+            newClass.instrument_offered__c = testProd.name;
+
+            newClasses.add(newClass);
+        }
+
+        INSERT newClasses;
+
+        instrumentController insCon = new instrumentController();
+        List<Revature_Music_Class__c> classes = insCon.getClasses();
+        system.assertEquals(newClasses, classes);
+    }
+
+    @isTest
+    public static void instrumentController_getSupply(){
+
+        Test.startTest();
+        string instrumentName = 'Saxophone';
+        Music_Product__c testProd = [SELECT id, Estimated_Quantity__c FROM Music_Product__c WHERE name=:instrumentName LIMIT 1];
+        
+        //Need to figure out how to pass in the instrument id here
+        PageReference pageRef = Page.instrumentDetailPage;
+        Test.setCurrentPage(pageRef);
+        ApexPages.currentPage().getParameters().put('id', testProd.id);
+
+        instrumentController insCon = new instrumentController();
+
+        decimal returnedSupply = insCon.getTotalSupply();
+        system.assertEquals(totalSupply, returnedSupply);
+    }
 
 }
