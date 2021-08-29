@@ -9,15 +9,17 @@
 
             <div class="align-center" style="text-align:center;">
                 <!--Image for the class will go here-->
+
+                <!--Displaying all class information needed-->
                 <apex:outputText value="{!currentClass.Name}" style="font-weight:bold;"/>
                 <br/>
                 <apex:outputText value="{!currentClass.Students_currently_in_Class__c}"/>
                 <br/>
-                <apex:outputText value="{!currentClass.Instructor__c}"/>
+                <apex:outputText value="{!currentClass.Instructor__c.Name}"/>
                 <br/>
-                <apex:outputText value="{!currentClass.Assistant_Instructor__c}"/>
+                <apex:outputText value="{!currentClass.Assistant_Instructor__c.Name}"/>
                 <br/>
-                <apex:outputText value="{!currentClass.Revature_Music_Class_Roster__c}"/>
+                <apex:outputText value="{!currentClass.Revature_Music_Class_Roster__c.Name}"/>
                 
             </div>
 
