@@ -3,7 +3,8 @@ public with sharing class rmsClassesController {
     //variable declarations
     public Revature_Music_Class__c currentClass {get; set;}
     public User currentInstructor = new User();
-    public User currentAssistantInstructor = new User();
+    public Music_Store_Accounts__c currentAssistantInstructor = new Music_Store_Accounts__c();
+    public Revature_Music_Class_Roster__c currentClassRoster = new Revature_Music_Class_Roster__c();
    
     
 
@@ -21,7 +22,6 @@ public with sharing class rmsClassesController {
     public string getcurrentInstructor(){
         this.currentInstructor = [SELECT Name, ID FROM User WHERE Id =:this.currentClass.Instructor__c LIMIT 1 ];
         return currentInstructor.Name;
-        //return this.currentClass.Instructor__c.Name;
     }
 
     public Decimal getStudentsInClass(){
@@ -29,13 +29,14 @@ public with sharing class rmsClassesController {
     } 
 
     public string getcurrentAssistantInstructor(){
-        this.currentAssistantInstructor = [SELECT Name, ID FROM User WHERE Id =:this.currentClass.Assistant_Instructor__c LIMIT 1];
+        this.currentAssistantInstructor = [SELECT Name, ID FROM Music_Store_Accounts__c WHERE Id =:this.currentClass.Assistant_Instructor__c LIMIT 1];
         return currentAssistantInstructor.Name;
-        //return this.currentClass.Assistant_Instructor__c;
     }
 
-    public string getClassRoster(){
-        return this.currentClass.Revature_Music_Class_Roster__c;
+    public string getcurrentClassRoster(){
+        this.currentClassRoster = [SELECT Name, ID FROM Revature_Music_Class_Roster__c WHERE Id =:this.currentClass.Revature_Music_Class_Roster__c LIMIT 1];
+        return currentClassRoster.Name;
+        
     }
 
     public string getClassAddress(){
