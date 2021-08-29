@@ -16,7 +16,7 @@
                 <br/>
                 <apex:outputText value="{!currentAssistantInstructor}"/>
                 <br/>
-                <apex:outputText value="{!currentClass.Revature_Music_Class_Roster__c}"/>
+                <apex:outputText value="{!currentClassRoster}"/>
                 
             </div>
 
