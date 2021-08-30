@@ -570,7 +570,7 @@
             <targetReference>Customer_Purchase_Method</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Obsolete</status>
     <variables>
         <description>The Music Product being Purchased</description>
         <name>MusicProduct</name>
