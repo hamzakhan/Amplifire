@@ -4,6 +4,12 @@
 
         <body>
 
+            <div class='align-center' style='text-align:center;'>
+                <!-- Image will go here -->
+                <apex:image url="{!URLFOR($Resource.PeterG)}" style="max-wiidth:240px;max-height:240px;"/> <br />
+                
+            </div>
+
             <div class="align-center" style="text-align:center;">
                 <!--Image for the class will go here-->
 
@@ -18,12 +24,14 @@
                 <br/>
                 <apex:outputText value="{!currentClassRoster}"/>
                 <br/>
+
+                <!--List out students names in a column. Names come from the corresponding class roster-->
                 <apex:repeat value = "{!currentStudentList}" var="Stu">
                     <li>
                         <apex:outputText value="{!Stu.Name}"/>
                     </li>
                 </apex:repeat>
-                <!--<apex:outputText value="{!currentStudentList}"/>-->
+                
                 
             </div>
 
