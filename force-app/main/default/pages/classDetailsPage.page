@@ -18,7 +18,12 @@
                 <br/>
                 <apex:outputText value="{!currentClassRoster}"/>
                 <br/>
-                <apex:outputText value="{!currentStudentList}"/>
+                <apex:repeat value = "{!currentStudentList}" var="Stu">
+                    <li>
+                        <apex:outputText value="{!Stu.Name}"/>
+                    </li>
+                </apex:repeat>
+                <!--<apex:outputText value="{!currentStudentList}"/>-->
                 
             </div>
 
