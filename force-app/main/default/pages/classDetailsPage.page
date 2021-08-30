@@ -26,7 +26,7 @@
                 <br/>
 
                 <!--List out students names in a column. Names come from the corresponding class roster-->
-                <apex:repeat value = "{!currentStudentList}" var="Stu">
+                <apex:repeat value="{!currentStudentList}" var="Stu">
                     <li>
                         <apex:outputText value="{!Stu.Name}"/>
                     </li>

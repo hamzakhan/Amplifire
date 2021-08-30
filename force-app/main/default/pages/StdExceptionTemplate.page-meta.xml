@@ -3,12 +3,8 @@
     <apiVersion>52.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <label>classDetailsPage</label>
-    <packageVersions>
-        <majorNumber>14</majorNumber>
-        <minorNumber>0</minorNumber>
-        <namespace>ca_collab_2_0</namespace>
-    </packageVersions>
+    <description>Default Lightning Platform template for standard exception pages</description>
+    <label>StdExceptionTemplate</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
         <minorNumber>7</minorNumber>
