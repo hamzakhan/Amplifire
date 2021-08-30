@@ -1,13 +1,15 @@
 @isTest
 public class rmsClassesControllerTest {
     
-    string className = 'This is a test class name';
-    string contactName = 'Cena';
-    string rosterName = 'This is a test roster name';
+    static string className = 'This is a test class name';
+    static string contactName = 'Cena';
+    static string rosterName = 'This is a test roster name';
 
 
     @TestSetup
     static void makeData(){
+        //Create new Instructor
+        User teacher = new User();
         
         //Create new class with a test name
         Revature_Music_Class__c newClass = new Revature_Music_Class__c();
@@ -22,8 +24,8 @@ public class rmsClassesControllerTest {
         //Create a new roster with a test name
         Revature_Music_Class_Roster__c newRoster = new Revature_Music_Class_Roster__c();
         newRoster.name = rosterName;
-        newRoster.Revature_Music_Class__c = newClass;
-        newRoster.contact = newContact;
+        newRoster.Revature_Music_Class__c = newClass.Id;
+        newRoster.contact__c = newContact.Id;
         INSERT newRoster;
 
 
