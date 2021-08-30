@@ -17,6 +17,8 @@
                 <apex:outputText value="{!currentAssistantInstructor}"/>
                 <br/>
                 <apex:outputText value="{!currentClassRoster}"/>
+                <br/>
+                <apex:outputText value="{!currentStudentList}"/>
                 
             </div>
 

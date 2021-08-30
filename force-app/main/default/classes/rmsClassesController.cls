@@ -40,18 +40,17 @@ public with sharing class rmsClassesController {
         
     }
 
-    public List<Student__c> getStudentNames(){
+    public List<Student__c> getcurrentStudentList(){
         this.currentClassRoster = [SELECT Name, ID, Student_1__c, Student_2__c, Student_3__c,  Student_4__c, Student_5__c, Student_6__c, Student_7__c, Student_8__c, Student_9__c, Student_10__c, Student_11__c, Student_12__c, Student_13__c, Student_14__c, Student_15__c FROM Revature_Music_Class_Roster__c WHERE Id =:this.currentClass.Revature_Music_Class_Roster__c LIMIT 1]; 
-        List<Student__c> currentSet = new List<Student__c>();
         List<Student__c> allPossible = [SELECT Name,ID FROM Student__c];
         System.debug(allPossible.size());
         for(Integer i=0; i<allPossible.size(); i++){
             //if any of the possible ids match any of the student IDs from the class roster
             if(allPossible[i].ID == currentClassRoster.Student_1__c || allPossible[i].ID ==currentClassRoster.Student_2__c || allPossible[i].ID ==currentClassRoster.Student_3__c ||  allPossible[i].ID ==currentClassRoster.Student_4__c || allPossible[i].ID ==currentClassRoster.Student_5__c || allPossible[i].ID ==currentClassRoster.Student_6__c || allPossible[i].ID ==currentClassRoster.Student_7__c || allPossible[i].ID ==currentClassRoster.Student_8__c || allPossible[i].ID ==currentClassRoster.Student_9__c || allPossible[i].ID ==currentClassRoster.Student_10__c || allPossible[i].ID ==currentClassRoster.Student_11__c || allPossible[i].ID ==currentClassRoster.Student_12__c || allPossible[i].ID ==currentClassRoster.Student_13__c || allPossible[i].ID ==currentClassRoster.Student_14__c || allPossible[i].ID ==currentClassRoster.Student_15__c){
-               currentSet.add(allPossible[i]); 
+                currentStudentList.add(allPossible[i]); 
             }
         }
-        return currentSet;
+        return currentStudentList;
     }
 
     public string getClassAddress(){
