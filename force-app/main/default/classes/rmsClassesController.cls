@@ -12,7 +12,7 @@ public with sharing class rmsClassesController {
     //Gets the ID of the objects passed and finds the Id of the corresponding class
     public rmsClassesController(){
         ID classID = ApexPages.CurrentPage().getParameters().get('id');
-        this.currentClass = [SELECT Name, Instructor__c, Revature_Music_Class_Roster__c, Students_currently_in_Class__c, Assistant_Instructor__c, Instruments_Offered__c, Class_address__c FROM Revature_Music_Class__c WHERE id=:classID LIMIT 1];
+        this.currentClass = [SELECT Name, Class_Image__c, Instructor__c, Revature_Music_Class_Roster__c, Students_currently_in_Class__c, Assistant_Instructor__c, Instruments_Offered__c, Class_address__c FROM Revature_Music_Class__c WHERE id=:classID LIMIT 1];
         
     }
 
