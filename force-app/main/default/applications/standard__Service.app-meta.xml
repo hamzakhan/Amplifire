@@ -11,15 +11,4 @@
     <tabs>standard-Solution</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
-    <tabs>Revature_Music_Class__c</tabs>
-    <tabs>Revature_Music_Class_Roster__c</tabs>
-    <tabs>Revature_Music_Client__c</tabs>
-    <tabs>Revature_Music_Store__c</tabs>
-    <tabs>Revature_Music_Store_Roster__c</tabs>
-    <tabs>Music_Store_Accounts__c</tabs>
-    <tabs>Music_Product__c</tabs>
-    <tabs>Music_Product_Return__c</tabs>
-    <tabs>Music_Product_Order__c</tabs>
-    <tabs>Music_Store_Stock_Task__c</tabs>
-    <tabs>Student__c</tabs>
 </CustomApplication>
