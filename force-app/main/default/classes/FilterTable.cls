@@ -1,16 +1,16 @@
 public class FilterTable {
-    string type;
-    list<Music_Product__c> filter;
-    public string gettype()
+    static string type;
+    static list<Music_Product__c> filter;
+    public static string gettype()
     {
-        return this.type;
+        return type;
     }
-    public void settype(string type)
+    public static void settype(string pickedtype)
     {
-        this.type = type;
+        type = pickedtype;
         system.debug(type);
     }
-    public list<SelectOption>  getOpt()
+    public static list<SelectOption>  getOpt()
     {
         list<SelectOption> opt=new List<SelectOption>{
         new SelectOption('Woodwind','Woodwind'),
@@ -21,14 +21,14 @@ public class FilterTable {
         };
         return opt;
     }
-	public void setFilter()
+	public static void setFilter()
     {
         list<Music_Product__c> records=[SELECT name, image__c, price__c, estimated_quantity__c, instrument_sub_type__c 
                                         FROM Music_Product__c WHERE Instrument_Sub_Type__c=:type]; 
 
-        this.filter=records;
+        filter=records;
     }
-  		public list<music_product__c> getFilter()
+  		public static list<music_product__c> getFilter()
         {
             return filter;
         }
