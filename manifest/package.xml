@@ -39,6 +39,7 @@
     </types>
     <types>
         <members>*</members>
+        <members>Contact.Music_Store_Account__c</members>
         <name>CustomField</name>
     </types>
     <types>
