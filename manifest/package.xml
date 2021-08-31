@@ -29,7 +29,8 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
-        <members>*</members>
+        <members>products</members>
+        <members>StockImages1</members>
         <name>StaticResource</name>
     </types>
     <types>
@@ -62,7 +63,16 @@
         <name>HomePageLayout</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Music_Product__c</members>
+        <members>Music_Product_Order__c</members>
+        <members>Music_Product_Return__c</members>
+        <members>Music_Store_Accounts__c</members>
+        <members>Music_Store_Stock_Task__c</members>
+        <members>Revature_Music_Class__c</members>
+        <members>Revature_Music_Class_Roster__c</members>
+        <members>Revature_Music_Client__c</members>
+        <members>Revature_Music_Store__c</members>
+        <members>Revature_Music_Store_Roster__c</members>
         <name>Layout</name>
     </types>
     <types>
