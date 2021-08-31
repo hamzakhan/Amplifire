@@ -41,6 +41,7 @@
         <members>*</members>
         <members>Contact.Music_Store_Account__c</members>
         <members>Order.Order_Late_Date__c</members>
+        <members>Account.Brass_Instruments__c</members>
         <name>CustomField</name>
     </types>
     <types>
