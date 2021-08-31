@@ -30,16 +30,17 @@ public class rmsClassesControllerTest {
     @TestSetup
     static void makeData(){
         //Create new Instructor and add all necessary fields
-        User teacher = new User();
-        teacher.FirstName = teacherFirstName;
-        teacher.LastName = teacherLastName;
-        teacher.Alias = teacherAlias;
-        teacher.Email = teacherEmail;
-        teacher.Username = teacherUsername;
-        teacher.CommunityNickname = teacherNickname;
-        teacher.UserRoleId = teacherRole;
+        Profile profileTeacher = [SELECT id FROM Profile WHERE name=:teacherName LIMIT 1];
+        User teacher = new User(FirstName=teacherFirstName, LastName=teacherLastName, Alias=teacherAlias, Username=teacherUsername, CommunityNickname=teacherNickname, TimeZoneSidKey='America/Los_Angeles', LocaleSidKey='en_US', ProfileId = profileTeacher.Id, LanguageLocaleKey = 'en_US', EmailEncodingKey='UTF-8');
+        //teacher.FirstName = teacherFirstName;
+        //teacher.LastName = teacherLastName;
+        //teacher.Alias = teacherAlias;
+        //teacher.Email = teacherEmail;
+        //teacher.Username = teacherUsername;
+        //teacher.CommunityNickname = teacherNickname;
+        //teacher.UserRoleId = teacherRole;
         //teacher.Userlicense = teacherUserlicense;
-        teacher.ProfileId = teacherProfile;
+        //teacher.ProfileId = teacherProfile;
         INSERT teacher;
 
         //Create new Assistant Instructor
@@ -102,6 +103,7 @@ public class rmsClassesControllerTest {
 
         //Tests the method itself
         string returnedName = rmsCon.getName();
+        System.System.debug(returnedName);
         System.assertEquals(className, returnedName);
 
         Test.StopTest();
@@ -112,6 +114,7 @@ public class rmsClassesControllerTest {
     public static void rmsClassesController_getcurrentInstructor(){
         
         Test.startTest();
+
 
         //Get a class from the database
         string className = 'Zebra Keys';
