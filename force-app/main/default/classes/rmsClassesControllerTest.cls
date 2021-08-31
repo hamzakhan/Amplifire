@@ -12,8 +12,8 @@ public class rmsClassesControllerTest {
     static string teacherName = 'Charlie Kelly';
     static string teacherAlias = 'ckell';
     static string teacherEmail = 'ckelly@milksteak.com';
-    static string teacherUsername = 'ckelly@milksteak.com';
-    static string teacherNickname = 'User16277681078389655087';
+    static string teacherUsername = 'ckelly@GrilledCharlie.com';
+    static string teacherNickname = 'GreenMan';
     static string teacherRole = 'Instructor';
     static string teacherUserlicense = 'Force.com - App Subscription';
     static string teacherProfile = 'Force.com - App Subscription User';
@@ -37,10 +37,13 @@ public class rmsClassesControllerTest {
 
     @TestSetup
     static void makeData(){
+        
+        //Create a new contact with a test name for class roster
+        contact newContact = new contact();
+        newContact.LastName = contactName;
+        INSERT newContact;
+
         //Create new Instructor and add all necessary fields
-
-        //User teacher = [SELECT id FROM User WHERE name=:teacherName LIMIT 1];
-
         User teacher = new User();
         Profile profileForTeacher = [SELECT id FROM Profile WHERE name = 'Instructor Profile'];
         teacher.FirstName = teacherFirstName;
@@ -49,15 +52,11 @@ public class rmsClassesControllerTest {
         teacher.Email = teacherEmail;
         teacher.Username = teacherUsername;
         teacher.CommunityNickname = teacherNickname;
-        //teacher.UserRoleId = teacherRole;
-        //teacher.Userlicense = teacherUserlicense;
         teacher.TimeZoneSidKey = teacherTimeZoneSidKey;
         teacher.LocaleSidKey = teacherLocaleSidKey;
         teacher.EmailEncodingKey = teacherEmailEncodingKey; 
         teacher.LanguageLocaleKey = 'en_US';
         teacher.ProfileId = profileForTeacher.id;
-
-        
         INSERT teacher;
 
         //Create new Assistant Instructor
@@ -72,6 +71,14 @@ public class rmsClassesControllerTest {
         Pupa1.Name = Pupa1Name;
         Pupa2.Name = Pupa2Name;
         Pupa3.Name = Pupa3Name;
+        List<Student__c> studentList = new List<Student__c>();
+        stud1.Name = Pupa1Name;
+        stud2.Name = Pupa2Name;
+        stud3.Name = Pupa3Name;
+        studentList.add(stud1);
+        studentList.add(stud2);
+        studentList.add(stud3);
+
         INSERT Pupa1;
         INSERT Pupa2;
         INSERT Pupa3;
@@ -81,24 +88,20 @@ public class rmsClassesControllerTest {
         newClass.name = className;
         newClass.Instructor__c = teacher.Id;
         newClass.Assistant_Instructor__c = assistantTeacher.Id;
-        newClass.Revature_Music_Class_Roster__c = rosterName;
         newClass.Students_currently_in_Class__c = classSize;
         INSERT newClass;
 
-        //Create a new contact with a test name
-        contact newContact = new contact();
-        newContact.LastName = contactName;
-        INSERT newContact;
-
         //Create a new roster with a test name
         Revature_Music_Class_Roster__c newRoster = new Revature_Music_Class_Roster__c();
-        newRoster.name = rosterName;
-        newRoster.Revature_Music_Class__c = newClass.Id;
-        newRoster.contact__c = newContact.Id;
+        newRoster.Name = rosterName;
+        newRoster.contact__c = newContact.id;
+        newRoster.Revature_Music_Class__c = newClass.id;
         newRoster.Student_1__c = Pupa1.Id;
         newRoster.Student_2__c = Pupa2.Id;
         newRoster.Student_3__c = Pupa3.Id;
         INSERT newRoster;
+        newClass.Revature_Music_Class_Roster__c = newRoster.id;
+        UPDATE newClass;
 
 
     }
@@ -225,14 +228,6 @@ public class rmsClassesControllerTest {
 
         Test.startTest();
 
-        //Add static students to student list
-        stud1.Name = Pupa1Name;
-        stud2.Name = Pupa2Name;
-        stud3.Name = Pupa3Name;
-        studentList.add(stud1);
-        studentList.add(stud2);
-        studentList.add(stud3);
-
         //Get a class from the database
         string className = 'Zebra Keys';
         Revature_Music_Class__c testClass = [SELECT id FROM Revature_Music_Class__c WHERE name=:className LIMIT 1];
@@ -245,7 +240,14 @@ public class rmsClassesControllerTest {
 
         //Tests the method itself
         List<Student__c> returnedStudentList = rmsCon.getcurrentStudentList();
-        System.assertEquals(studentList, returnedStudentList);
+        //List<Student__c> returnedStudentListNames = new List<Student__c>();
+        List<Student__c> returnedStudentListNames = [SELECT id, Name FROM Student__c WHERE Name='Dennis Reynolds' or Name='Ronald Mcdonald' or Name = 'Deandra Reynolds'];
+        //for(integer y=0; y<returnedStudentList.size(); y++){
+        //    if(returnedStudentList[y].id==Pupa1.id || returnedStudentList[y].id==Pupa2.id || returnedStudentList[y].id==Pupa3.id){
+        //        returnedStudentListNames.add(returnedStudentList[y]);
+        //    }
+        //} 
+        System.assertEquals(returnedStudentList, returnedStudentListNames);
 
         Test.StopTest();
 
