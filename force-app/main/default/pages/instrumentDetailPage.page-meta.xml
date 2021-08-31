@@ -3,8 +3,7 @@
     <apiVersion>52.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default experiences self registration confirmation page</description>
-    <label>CommunitiesSelfRegConfirm</label>
+    <label>instrumentDetailPage</label>
     <packageVersions>
         <majorNumber>14</majorNumber>
         <minorNumber>0</minorNumber>

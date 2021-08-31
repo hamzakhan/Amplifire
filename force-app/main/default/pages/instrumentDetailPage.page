@@ -1,0 +1,46 @@
+<apex:page controller="instrumentController">
+    
+    <head>
+        <title>{!currentProduct.name} details</title>
+    </head>
+    <body>
+        
+        <!--Used for the center-aligned portion of the page-->
+        <div class='align-center' style='text-align:center;'>
+            <apex:variable var="img" value="Products/images/{!currentProduct.Image__c}"/>
+            <apex:image url="{!URLFOR($Resource.Products, img)}" style="max-wiidth:240px;max-height:240px;"/> <br />
+            <apex:outputText value="{!currentProduct.name}" style="font-weight:bold;"/><br />
+            <apex:outputText value="{!currentProduct.Description__c}" />
+        </div>
+
+        <!--Space for formatting-->
+        <div id="Spaces">
+            <br />
+            <br />
+        </div>
+        
+        <!--Horizontal alignment of classes and number of orders -->
+        <div class='HorizontalComponents' style='display: flex;'>
+            <div class='Classes' style='width: 50%; float: left;'>
+               
+               <apex:outputText value="Offered classes with this instrument" />
+                <apex:repeat value="{!classes}" var="class">
+                   <li>
+                       <apex:outputText value="{!class.name}"/>
+                   </li>
+               </apex:repeat>                
+            </div>
+            
+            <!--Used for the number of orders of this product-->
+            <div class='NumOrders' style='flex-grow: 1;'>
+
+                <apex:outputText value="Total number of orders with this instrument: {!totalOrders}" style="text-align: right;" /> <br />
+
+                <apex:outputText value="Total amount of stock of this instrument: {!totalSupply}" />
+
+            </div>
+        </div>
+        
+    </body>
+    
+</apex:page>

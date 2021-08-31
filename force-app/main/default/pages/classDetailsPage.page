@@ -6,7 +6,7 @@
 
             <div class='align-center' style='text-align:center;'>
                 <!-- Image will go here -->
-                <apex:variable var = "img" value="StockImages1/{!currentClass.Class_Image__c}"/>
+                <apex:variable var="img" value="StockImages1/{!currentClass.Class_Image__c}"/>
                 <apex:image url="{!URLFOR($Resource.StockImages1, img)}" style="max-wiidth:240px;max-height:240px;"/> <br />
                 
             </div>
