@@ -1,9 +1,12 @@
 @isTest
 public class rmsClassesControllerTest {
     
+    //Variable declarations
     static string className = 'Zebra Keys';
     static string contactName = 'Louis Bonnet';
     static string rosterName = 'MCS-100';
+    static integer classSize = 3;
+    
     static string teacherFirstName = 'Charlie';
     static string teacherLastName = 'Kelly';
     static string teacherName = 'Charlie Kelly';
@@ -14,8 +17,13 @@ public class rmsClassesControllerTest {
     static string teacherRole = 'Instructor';
     static string teacherUserlicense = 'Force.com - App Subscription';
     static string teacherProfile = 'Force.com - App Subscription User';
+    
+    static string teacherTimeZoneSidKey = 'America/Los_Angeles';
+    static string teacherLocaleSidKey = 'en_US';
+    static string teacherEmailEncodingKey = 'UTF-8';
+    static string LanguageLocaleKey = 'en_US';
+    
     static string assistantTeacherName = 'John Smith';
-    static integer classSize = 3;
 
     static Student__c stud1 = new Student__c();
     static Student__c stud2 = new Student__c();
@@ -30,17 +38,26 @@ public class rmsClassesControllerTest {
     @TestSetup
     static void makeData(){
         //Create new Instructor and add all necessary fields
-        Profile profileTeacher = [SELECT id FROM Profile WHERE name=:teacherName LIMIT 1];
-        User teacher = new User(FirstName=teacherFirstName, LastName=teacherLastName, Alias=teacherAlias, Username=teacherUsername, CommunityNickname=teacherNickname, TimeZoneSidKey='America/Los_Angeles', LocaleSidKey='en_US', ProfileId = profileTeacher.Id, LanguageLocaleKey = 'en_US', EmailEncodingKey='UTF-8');
-        //teacher.FirstName = teacherFirstName;
-        //teacher.LastName = teacherLastName;
-        //teacher.Alias = teacherAlias;
-        //teacher.Email = teacherEmail;
-        //teacher.Username = teacherUsername;
-        //teacher.CommunityNickname = teacherNickname;
+
+        //User teacher = [SELECT id FROM User WHERE name=:teacherName LIMIT 1];
+
+        User teacher = new User();
+        Profile profileForTeacher = [SELECT id FROM Profile WHERE name = 'Instructor Profile'];
+        teacher.FirstName = teacherFirstName;
+        teacher.LastName = teacherLastName;
+        teacher.Alias = teacherAlias;
+        teacher.Email = teacherEmail;
+        teacher.Username = teacherUsername;
+        teacher.CommunityNickname = teacherNickname;
         //teacher.UserRoleId = teacherRole;
         //teacher.Userlicense = teacherUserlicense;
-        //teacher.ProfileId = teacherProfile;
+        teacher.TimeZoneSidKey = teacherTimeZoneSidKey;
+        teacher.LocaleSidKey = teacherLocaleSidKey;
+        teacher.EmailEncodingKey = teacherEmailEncodingKey; 
+        teacher.LanguageLocaleKey = 'en_US';
+        teacher.ProfileId = profileForTeacher.id;
+
+        
         INSERT teacher;
 
         //Create new Assistant Instructor
