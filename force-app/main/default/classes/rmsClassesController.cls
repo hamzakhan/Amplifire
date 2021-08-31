@@ -53,7 +53,4 @@ public with sharing class rmsClassesController {
         return currentStudentList;
     }
 
-    public string getClassAddress(){
-        return this.currentClass.Class_address__c;
-    }
 }
