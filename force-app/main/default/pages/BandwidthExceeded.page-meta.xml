@@ -6,11 +6,6 @@
     <description>Default Lightning Platform Limit Exceeded page</description>
     <label>BandwidthExceeded</label>
     <packageVersions>
-        <majorNumber>14</majorNumber>
-        <minorNumber>0</minorNumber>
-        <namespace>ca_collab_2_0</namespace>
-    </packageVersions>
-    <packageVersions>
         <majorNumber>1</majorNumber>
         <minorNumber>7</minorNumber>
         <namespace>sf_com_apps</namespace>

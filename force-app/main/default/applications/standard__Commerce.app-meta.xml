@@ -11,52 +11,8 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Order</tabs>
-    <tabs>Revature_Music_Class__c</tabs>
-    <tabs>Revature_Music_Class_Roster__c</tabs>
-    <tabs>Revature_Music_Client__c</tabs>
-    <tabs>Revature_Music_Store__c</tabs>
-    <tabs>Revature_Music_Store_Roster__c</tabs>
-    <tabs>Music_Store_Accounts__c</tabs>
-    <tabs>Music_Product__c</tabs>
-    <tabs>Music_Product_Return__c</tabs>
-    <tabs>Music_Product_Order__c</tabs>
-    <tabs>Music_Store_Stock_Task__c</tabs>
-    <tabs>Student__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
-        <mappings>
-            <tab>Music_Product_Order__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Music_Product_Return__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Music_Product__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Music_Store_Accounts__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Music_Store_Stock_Task__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Revature_Music_Class_Roster__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Revature_Music_Class__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Revature_Music_Client__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Revature_Music_Store_Roster__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Revature_Music_Store__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Student__c</tab>
-        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>
