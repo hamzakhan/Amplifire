@@ -1,18 +1,14 @@
-# Salesforce DX Project: Next Steps
+# Recature Music Store
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This project started with Max Chervinsky as his P0 at Revature. It was then built on by the Amplifier - The Noise team for P1. Below is a step-by-step guide on how to deploy this metadata to your trailhaed playground org.
 
-## How Do You Plan to Deploy Your Changes?
+## Set up guide
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- Navigate to new folder
+- git clone "https://github.com/maxcherv/Amplifire.git"
+- Authorize the new org
+    - This may require a custom URL unless you change the JSON for configuration
+- Deploy SiteSamples (it is a static resource)
+- Deploy package.xml
 
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Note that SiteSamples needs to be deployed before the rest of the org.
