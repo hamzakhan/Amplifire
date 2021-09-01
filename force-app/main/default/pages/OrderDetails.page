@@ -1,0 +1,33 @@
+<apex:page controller="orderInstrumentDetailsController" showHeader="false">
+	<title>Accounts and Product Orders</title>
+    	<body style='text-align:center;'>
+        	<h1>
+            	Order Instrument Details
+        	</h1>
+        	<br/>
+        	<br/>
+            	<apex:form >
+            		<apex:pageBlock >
+            			<h2>
+            			Customer Orders
+            			</h2>
+                		<ol>
+            				<apex:repeat value="{!TempOrders}" var="temp1">
+                			<li>
+                        		<apex:outputText value="Order Number: {!temp1.Name}"/>
+                				<br/>
+                                <apex:outputText value="Customer Name: {!temp1.Customer_First_Name__c} {!temp1.Customer_s_Last_Name__c}"/>
+                    		</li>
+               				<br/>
+           					</apex:repeat>
+                		</ol>
+                		<apex:PageBlockButtons >
+                    		<apex:commandButton action="{!previousPage}" value="Previous" id="button1"/>
+                		</apex:PageBlockButtons>
+                	</apex:pageBlock>
+                </apex:form>
+            <br/>
+        	<br/>
+        	<br/>
+   		</body>
+</apex:page>
