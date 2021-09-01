@@ -4,8 +4,7 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Instructor</label>
-    <referenceTo>Account</referenceTo>
-    <relationshipLabel>Revature Music Class Rosters</relationshipLabel>
+    <referenceTo>User</referenceTo>
     <relationshipName>Revature_Music_Class_Rosters</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>
