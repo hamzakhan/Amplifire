@@ -1,0 +1,39 @@
+<apex:page controller="accountInstrumentDetailsController" showHeader="false">
+	<title>Accounts and Product Orders</title>
+    	<body style='text-align:center;'>
+        	<h1>
+            	Account Instrument Details
+        	</h1>
+        	<br/>
+        	<br/>
+            	<apex:form >
+            		<apex:pageBlock >
+            			<h2>
+            			Customer Accounts
+            			</h2>
+                		<ol>
+            				<apex:repeat value="{!TempAccounts}" var="temp1">
+                			<li>
+                        		<apex:outputText value="Account Name: {!temp1.Name}"/>
+                				<br/>
+                    			<apex:outputText value="Account Created: {!temp1.Account_Opened_Date__c}"/>
+                                <br/>
+                                <apex:outputText value="Instrument Types: "/>
+                                <apex:outputText rendered="{!temp1.Brass_Instrument__c}" value="Brass "/>
+                                <apex:outputText rendered="{!temp1.Percussion_Instruments__c}" value="Percussion "/>
+                                <apex:outputText rendered="{!temp1.String_Instrument__c}" value="Strings "/>
+                                <apex:outputText rendered="{!temp1.Woodwind_Instruments__c}" value="Woodwind"/>
+                    		</li>
+               				<br/>
+           					</apex:repeat>
+                		</ol>
+                		<apex:PageBlockButtons >
+                    		<apex:commandButton action="{!previousPage}" value="Previous" id="button1"/>
+                		</apex:PageBlockButtons>
+                	</apex:pageBlock>
+                </apex:form>
+            <br/>
+        	<br/>
+        	<br/>
+   		</body>
+</apex:page>

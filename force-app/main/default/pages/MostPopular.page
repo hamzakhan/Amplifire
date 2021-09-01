@@ -1,0 +1,51 @@
+<apex:page controller="popularController" showHeader="false">
+	<title>Accounts and Product Orders</title>
+    <body style='text-align:center;'>
+        <h1>
+            Accounts and Product Orders
+        </h1>
+        <br/>
+        <br/>
+            <apex:form >
+            <apex:pageBlock >
+            <h2>
+            Customer Accounts
+            </h2>
+                <ol>
+            	<apex:repeat value="{!TempAccounts}" var="temp1">
+                	<li>
+                        <apex:outputText value="Account Name: {!temp1.Name}"/>
+                	<br/>
+                    	<apex:outputText value="Account Created: {!temp1.Account_Opened_Date__c}"/>
+                    </li>
+               		<br/>
+           		</apex:repeat>
+                </ol>
+                <apex:PageBlockButtons >
+                    <apex:commandButton action="{!accountsPage}" value="More Accounts" id="button1"/>
+                </apex:PageBlockButtons>
+                </apex:pageBlock>
+                <apex:pageBlock >
+            <h2>
+            Product Orders
+            </h2>
+                <ol>
+            	<apex:repeat value="{!TempOrders}" var="temp2">
+                	<li>
+                        <apex:outputText value="Customer's Name: {!temp2.Customer_s_Last_Name__c}"/>
+                	<br/>
+                    	<apex:outputText value="Order Number: {!temp2.Name}"/>
+                    </li>
+               		<br/>
+           		</apex:repeat>
+                </ol>
+                <apex:PageBlockButtons >
+                    <apex:commandButton action="{!ordersPage}" value="More Orders" id="button1"/>
+                </apex:PageBlockButtons>
+                </apex:pageBlock>
+                </apex:form>
+            <br/>
+        <br/>
+        <br/>
+    </body>
+</apex:page>
