@@ -1,21 +1,21 @@
 <apex:page Controller="FilterTable"  >
 
 <apex:PageBlock >
-<div style="text-align:center;"> 
+<div style="text-align:center;">  <!-- Aligns text to center-->
 <apex:form >
 
 <h1 style="font-size:16px;">Choose the instrument type to search for:</h1><br></br>
 
 <apex:pageBlock >
 
-<apex:SelectList value="{!type}">
-    <apex:selectOptions value="{!opt}"></apex:selectOptions>
+<apex:SelectList value="{!type}">  <!-- Retrieves list options through controller -->
+    <apex:selectOptions value="{!opt}"></apex:selectOptions>   
 </apex:SelectList>
 
     <br></br>
  
         <apex:pageBlockButtons >
-            <apex:commandButton action="{!setfilter}" value="Search Instruments"/>
+            <apex:commandButton action="{!setfilter}" value="Search Instruments"/> <!-- Button sets the  class's type variable to the chosen option -->
         </apex:pageBlockButtons>
     </apex:pageBlock>
  </apex:form>
@@ -23,15 +23,16 @@
 
 </div>
 <div style="text-align:center; font-size:18px;">
-<apex:pageBlockTable value="{!filter}" var="inst">
+<apex:pageBlockTable value="{!filter}" var="inst"> <!-- Uses the type variable to filter the returned table -->
             <apex:column >
                 <apex:variable var="img" value="Products/images/{!inst.Image__c}"/>
                 <apex:image url="{!URLFOR($Resource.products, img)}" style="max-wiidth:160px;max-height:160px;"/>
+                <!-- displays the product image from its image field-->
             </apex:column>
             <apex:column value="{!inst.name}">
               
             </apex:column>
-            
+            <!-- displays the rest of the columns -->
             <apex:column value="{!inst.Instrument_Sub_Type__c}"/> 
             <apex:column value="{!inst.Price__c}"/>
             <apex:column value="{!inst.Estimated_Quantity__c}"/>
