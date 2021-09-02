@@ -1,4 +1,4 @@
-# Recature Music Store
+# Revature Music Store
 
 This project started with Max Chervinsky as his P0 at Revature. It was then built on by the Amplifier - The Noise team for P1. Below is a step-by-step guide on how to deploy this metadata to your trailhaed playground org.
 
