@@ -1,0 +1,19 @@
+<apex:page >
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    
+    <script>
+        $Lightning.use("c:MusicProducts", function() {
+            $Lightning.createComponent(
+                "c:MusicStore",
+                {},
+                "app",
+                function(cmp) {
+                    console.log(cmp);
+                });
+            });
+    </script>
+    
+    <div id="app">
+        
+    </div>
+</apex:page>

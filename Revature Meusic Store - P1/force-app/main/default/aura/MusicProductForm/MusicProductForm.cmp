@@ -1,0 +1,32 @@
+<aura:component controller="MusicProductFormController">
+	<aura:attribute name="newItem" type="Music_Product__c"
+         default="{ 'sobjectType': 'Music_Product__c',
+                        'Name': '',
+                  		'Description__c': '',
+                		'Estimated_Quantity__c': 0,
+                		'Image__c': '' }"/>
+    <aura:attribute name="images" type="String[]" default="grandpiano.jpg,electricguitar.jpg,altosax.jpg,trumpet.jpg,flute.jpg,snaredrum.jpg"/>
+    <form class="slds-form_stacked">
+            <lightning:input aura:id="itemform" label="Product Name"
+                             name="itemname"
+                             value="{!v.newItem.Name}"
+                             required="true"/>
+            <lightning:input aura:id="itemform" label="Description"
+                             name="itemdesc"
+                             value="{!v.newItem.Description__c}"/>
+            <lightning:input type="number" aura:id="itemform" label="Quantity In Stock"
+                             name="itemquantity"
+                             min="0"
+                             value="{!v.newItem.Estimated_Quantity__c}"
+                             messageWhenRangeUnderflow="Enter an amount that's at least 0."/>  
+        	<lightning:select aura:id="itemform" label="Image" name="itemimage" value="{!v.newItem.Image__c}">
+        		<aura:iteration items="{!v.images}" var="image">
+                	<option text="{!image}"/>
+            	</aura:iteration>
+        	</lightning:select>
+            <lightning:button label="Create Product"
+                              class="slds-m-top_medium"
+                              variant="brand"
+                              onclick="{!c.clickCreateItem}"/>
+        </form>
+</aura:component>

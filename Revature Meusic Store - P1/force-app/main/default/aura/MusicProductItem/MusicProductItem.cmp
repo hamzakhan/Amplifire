@@ -1,0 +1,24 @@
+<aura:component controller="MusicProductItemController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="item" type="Music_Product__c" required="true"/>
+    <aura:attribute name="totalOrders" type="Integer" default="0"/>
+    
+    <lightning:card title="{!v.item.Name}">
+        
+    <img src="{!'/resource/products/Products/images/' + v.item.Image__c}" height="50" width="50"/>
+        
+    <p>
+        {!v.item.Description__c}
+    </p>
+        
+    <p>
+        Quantity In Stock: {!v.item.Estimated_Quantity__c}
+    </p>
+        
+    <p>
+        Quantity Ordered: {!v.totalOrders}
+    </p>
+        
+    </lightning:card>
+        
+</aura:component>

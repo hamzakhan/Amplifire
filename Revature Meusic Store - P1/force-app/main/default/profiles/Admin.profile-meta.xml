@@ -160,6 +160,7 @@
         <apexClass>TestOrderDetail</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
         <apexClass>accountDetailsController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -455,11 +456,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Music_Product__c.Image__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Music_Product__c.Instrument_Sub_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

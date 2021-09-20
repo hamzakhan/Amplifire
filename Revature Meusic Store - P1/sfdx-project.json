@@ -8,6 +8,9 @@
   "name": "P1Amp",
   "namespace": "",
 <<<<<<< HEAD
+  "sfdcLoginUrl": "https://resilient-badger-iiroml-dev-ed.my.salesforce.com/",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   "sfdcLoginUrl": "https://resourceful-narwhal-vv3fnx-dev-ed.my.salesforce.com/",
 =======
@@ -16,5 +19,6 @@
 =======
   "sfdcLoginUrl": "https://playful-impala-l4v4ef-dev-ed.my.salesforce.com/",
 >>>>>>> origin/JohnnyP2
+>>>>>>> c121b769bda8182bb8563729d64ca0a6763c80b4
   "sourceApiVersion": "52.0"
 }

@@ -1,0 +1,10 @@
+<aura:component controller="MusicProductListController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="items" type="Music_Product__c[]"/>
+ 
+            <aura:iteration items="{!v.items}" var="item">
+                <c:MusicProductItem item="{!item}"/>
+            </aura:iteration>
+    
+</aura:component>
