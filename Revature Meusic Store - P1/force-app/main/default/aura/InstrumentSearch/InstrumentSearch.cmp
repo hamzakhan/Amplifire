@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable">
+    <aura:attribute name="instrument" type="Music_Product__c"/>
+    
+    <lightning:select name="select1" label="Instrument Type" required="true" onchange="{!c.selectInstrument}">
+        <option value="">choose one...</option>
+        <option value="1">one</option>
+        <option value="2">two</option>
+        <option value="3">three</option>
+    </lightning:select>
+    
+    <!--
+	- Link picklist values of music product with lightning:select
+	- create controller, when option is selected query instruments
+	- display instruments on the page
+	-->
+
+</aura:component>
