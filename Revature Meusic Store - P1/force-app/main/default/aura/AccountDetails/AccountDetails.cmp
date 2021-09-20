@@ -1,0 +1,25 @@
+<aura:component controller="accountDetailsController" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="account" type="Music_Store_Accounts__c[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <title>Accounts and Product Orders</title>
+    	<body style='text-align:center;'>
+        	<h1>
+            	Account Instrument Details
+        	</h1>
+            <br/>
+        	<br/>
+
+            <lightning:accordion aura:id="accordion">
+                <lightning:card title="Customer Accounts">
+            	<aura:iteration items="{!v.TempAccounts}" var="accnt">
+                	<lightning:accordionSection label="{!accnt}">
+                        <c:AccountItem account ="{!accnt}"/>
+                    </lightning:accordionSection>
+                </aura:iteration>
+            
+            </lightning:card>
+            </lightning:accordion>
+  
+    	</body>
+	
+</aura:component>

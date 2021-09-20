@@ -77,7 +77,7 @@
         <members>Revature_Music_Client__c</members>
         <members>Revature_Music_Store__c</members>
         <members>Revature_Music_Store_Roster__c</members>
-        <name>Layout</name>
+        <name>Layout</name> 
     </types>
     <types>
         <members>*</members>
