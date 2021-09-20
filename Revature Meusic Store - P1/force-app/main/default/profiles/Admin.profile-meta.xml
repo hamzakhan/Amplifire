@@ -125,6 +125,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>InstrumentSearchController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MyFirstVscodeClass</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -149,7 +153,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SearchInstrumentListController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestOrderDetail</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+        <apexClass>accountDetailsController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>

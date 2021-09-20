@@ -5,6 +5,7 @@
     <description>Does the account play string instruments.</description>
     <externalId>false</externalId>
     <label>String Instrument</label>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>
 </CustomField>

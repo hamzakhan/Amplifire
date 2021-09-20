@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="account" type="Music_Store_Accounts__c" />
+    
+    <lightning:recordForm recordId="{!v.account.Id}" objectApiName="Music_Store_Accounts__c" layoutType="Compact"/>
+    
+</aura:component>
