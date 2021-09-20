@@ -1,0 +1,37 @@
+<!-- The interface for implements makes the component available for record pages and any other type of page.
+Controller is an apex class -->
+<aura:component controller="SearchInstrumentListController" implements="flexipage:availableForAllPageTypes,force:appHostable" access="global">
+    
+    <!-- Declaring client-side attributes to be used in components 
+	Attributes are like variables that store data -->
+    <aura:attribute name="musicInstruments" type="Music_Product__c[]"/>
+    <aura:attribute name="columnsToDisplay" type="List"/>
+    <aura:attribute name="searchKeyword" type="String"/>
+    
+    <!-- Method to be called on component intialization, call method from JS controller -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:card title="Instrument Search List">
+        <!-- lightning:layout is a flexible grid system for arranging containser within a page or inside another container
+        Attribute includes horizontalAlign, verticalAlign, pullToBoundary -->
+        <lightning:layout>
+            <!-- lightning:layoutItem defines content to display within lightning:layout -->
+            <lightning:layoutItem size="3" padding="around-small">
+                <!-- Like HTML id, if you want to refer to it else where -->
+                <!-- Like JavaScript events the onChange event checks when value in the search box changes -->
+                <lightning:input aura:id="searchField"
+                                 label="Instrument Search"
+                                 value="{!v.searchKeyword}"
+                                 placeholder="Search Instruments"
+                                 onChange="{!c.searchMusicProduct}" />
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <!-- Instrument list goes here -->
+        <lightning:datatable data="{!v.musicInstruments}"
+            columns="{!v.columnsToDisplay}"
+            keyField="Id"
+            hideCheckboxColumn="true" />
+        
+    </lightning:card>  	
+</aura:component>

@@ -121,6 +121,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>InstrumentSearchController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MyFirstVscodeClass</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -142,6 +146,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>ReturnStockUpdaterTriggerTester</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SearchInstrumentListController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -440,11 +448,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Music_Product__c.Instrument_Sub_Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Music_Product__c.Music_Product_Description__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -474,9 +477,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Music_Product__c.Product_Type__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
