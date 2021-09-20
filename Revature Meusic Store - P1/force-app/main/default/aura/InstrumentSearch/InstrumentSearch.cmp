@@ -1,12 +1,16 @@
+<!-- Add the force:appHostable interface to a Lightning component to allow it to be used as a custom tab in Lightning Experience -->
 <aura:component implements="flexipage:availableForAllPageTypes,force:appHostable">
+    
     <aura:attribute name="instrument" type="Music_Product__c"/>
     
-    <lightning:select name="select1" label="Instrument Type" required="true" onchange="{!c.selectInstrument}">
-        <option value="">choose one...</option>
-        <option value="1">one</option>
-        <option value="2">two</option>
-        <option value="3">three</option>
-    </lightning:select>
+    <!-- Component Start -->
+    
+    <div class="form-group">
+        <lightning:select aura:id="instrumentType" value="{!v.Music_Product__c.Instrument_Sub_Type__c}" label="Instrument Type" onchange="{!c.selectInstrument}">
+            <option value="">choose one...</option>
+        </lightning:select>
+    </div> <!-- End of form-group div -->
+    
     
     <!--
 	- Link picklist values of music product with lightning:select
