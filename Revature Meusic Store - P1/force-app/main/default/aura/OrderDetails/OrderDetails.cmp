@@ -1,0 +1,38 @@
+<aura:component controller="GetOrderList" implements="flexipage:availableForAllPageTypes,force:hasRecordId" >
+    <aura:attribute name = "orderList" type = "String[]" />
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <div class = "slds-box">
+        <div class = "slds-text-heading_large"> Order Details</div>
+        <br />
+      
+        <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+        <thead>
+            <tr class="slds-text-heading_label">
+ 
+            <th scope="col"><div class="slds-truncate" title="Name">Order Number</div></th>
+            <th scope="col"><div class="slds-truncate" title="Customer First Name">Customer First Name</div></th>
+            <th scope="col"><div class="slds-truncate" title="Customer Last_Name">Customer Last name</div></th>
+            <th scope="col"><div class="slds-truncate" title="Number of Music Products1 ordered">Number of Music Products1 ordered</div></th>
+            <th scope="col"><div class="slds-truncate" title="Number of Music Products2 ordered">Number of Music Products2 ordered</div></th>
+         	<th scope="col"><div class="slds-truncate" title="Number of Music Products3 ordered">Number of Music Products3 ordered</div></th>
+            </tr>
+        
+        </thead>
+        <tbody>
+            <!-- Use the Apex model and controller to fetch server side data -->
+            <aura:iteration items="{!v.orderList}" var="order">
+        <tr>
+        
+            <td><div class="slds-truncate" title="{!order.Name}">{!order.Name}</div></td>
+            <td><div class="slds-truncate" title="{!order.Customer_First_Name__c}">{!order.Customer_First_Name__c}</div></td>
+            <td><div class="slds-truncate" title="{!order.Customer_s_Last_Name__c}">{!order.Customer_s_Last_Name__c}</div></td>
+            <td><div class="slds-truncate" title="{!order.Number_of_Music_Products_1_ordered__c}">{!order.Number_of_Music_Products_1_ordered__c}</div></td>
+            <td><div class="slds-truncate" title="{!order.Number_of_Music_Products_2_ordered__c}">{!order.Number_of_Music_Products_2_ordered__c}</div></td>
+            <td><div class="slds-truncate" title="{!order.Number_of_Music_Products_3_ordered__c}">{!order.Number_of_Music_Products_3_ordered__c}</div></td>
+         
+		</tr>
+		</aura:iteration>
+		</tbody>
+			</table>
+	</div>
+</aura:component>

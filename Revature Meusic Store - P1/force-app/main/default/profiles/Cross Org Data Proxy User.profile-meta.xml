@@ -117,6 +117,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>GetOrderList</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>InstSearchTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
