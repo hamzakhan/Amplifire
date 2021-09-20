@@ -145,6 +145,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>accountDetailsController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>accountInstrumentDetailsController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
