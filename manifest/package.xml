@@ -29,8 +29,7 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
-        <members>products</members>
-        <members>StockImages1</members>
+        <members>*</members>
         <name>StaticResource</name>
     </types>
     <types>

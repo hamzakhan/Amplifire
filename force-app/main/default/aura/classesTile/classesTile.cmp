@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="classes" type="Revature_Music_Class__c" />
+    <aura:registerEvent name="ClassSelect" type="c:ClassSelect"/>
+	<aura:registerEvent name="ClassSelected" type="c:ClassSelected"/>
+        <lightning:button name="{!v.classes.Id}" class="{!v.selected? 'tile selected' : 'tile'}" onclick="{!c.onClassClick}">
+            <!-- Image -->
+            <div style="{!'background-image: url(\'' + v.classes.Picture__c + '\')'}" class="innertile">
+              <div class="lower-third">
+               <h1 class="slds-truncate">{!v.classes.Name}</h1>
+          
+              </div>
+            </div>
+        </lightning:button>
+</aura:component>

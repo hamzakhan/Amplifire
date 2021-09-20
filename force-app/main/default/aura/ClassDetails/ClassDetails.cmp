@@ -1,0 +1,23 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<aura:attribute name="selTabId" type="Id"/>
+<aura:handler event="c:ClassSelected" action="{!c.onClassSelected}"/>
+<aura:attribute name="classes" type="Revature_Music_Class__c" />
+<aura:attribute name="id" type="Id"/>
+
+    <aura:if isTrue="{!!empty(v.classes)}">
+    <article class="slds-card">
+        
+        <div class="slds-tabs_scoped">
+  <ul class="slds-tabs_scoped__nav" role="tablist">
+    <li class="slds-tabs_scoped__item slds-is-active" title="Item One" role="presentation">
+      <a class="slds-tabs_scoped__link" href="#" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-scoped-1" id="tab-scoped-1__item">DETAILS</a>
+    </li>
+
+  </ul>
+  <div id="tab-scoped-1" class="slds-tabs_scoped__content slds-show" role="tabpanel" aria-labelledby="tab-scoped-1__item"> <c:ClassDetail classes="{!v.classes}"/></div>
+
+</div>
+
+      </article>
+    </aura:if>   
+</aura:component>

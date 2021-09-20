@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'All level', 'value': ''},                                                    
+    {'label': 'Advanced', 'value': 'Advanced'},
+    {'label': 'Beginners', 'value': 'Beginners'},
+    {'label': 'Intermediate', 'value': 'Intermediate'},]"/>
+    <aura:attribute name="sOption" type="String"/>
+	<aura:registerEvent name="Option" type="c:getOption"/> 
+	<aura:registerEvent name="launchNewClassForm" type="c:launchNewClassForm"/>
+	<aura:handler name="launchNewClassForm" event="c:launchNewClassForm" action="{!c.handleNewClassForm}"/>  
+
+ 		<lightning:layout horizontalAlign="center" verticalAlign="center" >
+ 			<lightning:layoutItem padding="horizontal-medium">
+    			<lightning:combobox name="popular" label="" value="All type" placeholder="Select Level" options="{! v.options }" onchange="{! c.handleChange }"/>
+            </lightning:layoutItem>
+     
+            <lightning:layoutItem padding="horizontal-medium " >
+                <lightning:buttonGroup>
+                     <lightning:button variant="brand" class="fix" label="Search" title="Brand action" onclick="{! c.searchClick }" />
+                	 <lightning:button label="New" class="fix" title="Neutral action" onclick="{! c.newClick }"/>
+                </lightning:buttonGroup>
+            </lightning:layoutItem>
+        </lightning:layout>
+   
+        
+
+</aura:component>

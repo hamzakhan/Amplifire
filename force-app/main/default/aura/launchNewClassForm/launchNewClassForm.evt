@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Event template" >
+   <aura:attribute name="music_class" type="Revature_Music_Class__c"/>
+</aura:event>
