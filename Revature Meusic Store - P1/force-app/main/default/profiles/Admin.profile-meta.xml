@@ -458,16 +458,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-<<<<<<< HEAD
-        <editable>false</editable>
-=======
         <editable>true</editable>
         <field>Music_Product__c.Instrument_Sub_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
->>>>>>> main
         <field>Music_Product__c.Music_Product_Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
