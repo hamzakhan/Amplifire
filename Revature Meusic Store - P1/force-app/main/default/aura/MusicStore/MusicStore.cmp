@@ -1,0 +1,29 @@
+<aura:component >
+    <aura:attribute name="currentComponent" type="String"/>
+    <aura:attribute name="components" type="String[]" default="Music Product List,Add Music Product,Order Details,Account Details"/>
+    
+    <div class="slds-align_absolute-center">
+    	<lightning:select name="navSelect" label="View Page:" value="{!v.currentComponent}">
+        	<aura:iteration items="{!v.components}" var="component">
+                	<option text="{!component}"/>
+            </aura:iteration>
+   		</lightning:select>
+    </div>
+    
+	<aura:if isTrue="{!v.currentComponent =='Music Product List'}">
+    	<c:MusicProductList/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.currentComponent =='Add Music Product'}">
+    	<c:MusicProductForm/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.currentComponent =='Order Details'}">
+    	<c:OrderDetails/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.currentComponent =='Account Details'}">
+    	<c:AccountDetails/>
+    </aura:if>
+    
+</aura:component>
