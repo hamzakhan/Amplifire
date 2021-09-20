@@ -3,6 +3,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>InstrumentSearch</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>SearchInstrumentList</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>flowLayout</name>
                     <value>oneColumn</value>
