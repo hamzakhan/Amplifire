@@ -1,0 +1,26 @@
+<aura:component controller="PopularSearchResults" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="classes" Type="Revature_Music_Class__c"/>
+    <aura:attribute name="instruments" Type="Music_Product__c[]"/> 
+    <aura:attribute name="option" Type="String"/>  
+    <aura:handler name="init" action="{!c.onInit}" value="{!this}"/>
+   
+        
+                 <lightning:layout horizontalAlign="center" verticalAlign="center" multipleRows='true'>
+            		<lightning:layoutItem flexibility="grow"  class="slds-m-right_small" >
+                <aura:if isTrue="{!not(empty(v.instruments))}">      
+                  <aura:iteration items="{!v.instruments}" var="instrument">
+                      <c:instrumentsTile instruments="{!instrument}"/>
+                  </aura:iteration>
+                   <aura:set attribute="else">
+                   <lightning:layoutItem class="slds-align_absolute-center" flexibility="auto" padding="around-small">
+                        <ui:outputText value="No popular instruments found" />
+                    </lightning:layoutItem>
+                   </aura:set>
+                </aura:if>
+       
+                    </lightning:layoutItem>
+                </lightning:layout>
+       
+
+	
+</aura:component>

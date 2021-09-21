@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+<lightning:card title="Most Popular" class="slds-m-top_10px" >
+    <c:PopularSearch />
+</lightning:card>    
+<lightning:card title="Popular Instruments" >
+     <c:PopularSearchResults /> 
+</lightning:card>
+
+
+</aura:component>

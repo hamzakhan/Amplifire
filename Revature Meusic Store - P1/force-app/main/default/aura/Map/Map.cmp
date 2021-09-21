@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+   <aura:attribute name="classes" type="Revature_Music_Class__c"/>
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler event="c:ClassSelected" action="{!c.FindMap}"/>
+    <!-- attributes -->
+    <aura:attribute name="mapMarkers" type="Object"/>
+    <aura:attribute name="zoomLevel" type="Integer" />
+
+    <!-- the map component -->
+    <article class="slds-card">
+    <lightning:map 
+        mapMarkers="{! v.mapMarkers }" 
+        zoomLevel="{!v.zoomLevel}" />
+    </article>
+</aura:component>

@@ -5,7 +5,6 @@
     <description>Does the account play any percussion instruments?</description>
     <externalId>false</externalId>
     <label>Percussion Instruments</label>
-    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>
 </CustomField>

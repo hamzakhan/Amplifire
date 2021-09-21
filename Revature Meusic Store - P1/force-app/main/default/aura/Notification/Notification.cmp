@@ -1,0 +1,34 @@
+<aura:component controller="notificationController" implements="flexipage:availableForAllPageTypes">
+  <aura:handler name="init" action="{!c.onInit}" value="{!this}"/>  
+     <aura:attribute name="classes" Type="Revature_Music_Class__c[]"/>
+     <aura:if isTrue="{!not(empty(v.classes))}">      
+                  <aura:iteration items="{!v.classes}" var="classes">
+                       <article class="slds-card">
+                      <a class="slds-notification__target slds-media" href="#">
+                          <span class="slds-icon_container slds-icon-standard-event slds-media__figure" title="event">
+                            <lightning:icon iconName="standard:task" alternativeText="Event" title="Event" />
+                            <span class="slds-assistive-text">Description of icon when needed</span>
+                          </span>
+                          <div class="slds-media__body">
+                            <h2 class="slds-text-heading_small slds-m-bottom_xx-small" id="noti-86">
+                              <span class="slds-assistive-text">event notification:</span><ui:outputText value="{!classes.Name}"/></h2>
+                               <p> <ui:outputText value="{!classes.Instruments__r.Name}"/>  </p>
+                              <p> 
+                                   Starts <lightning:formattedDateTime value="{!classes.Starting_Date__c}" year="2-digit" month="short" day="2-digit" weekday="long"/>
+                              </p>
+                                  
+                                 
+                          </div>
+                        </a>
+                      </article>
+                  </aura:iteration>
+                   <aura:set attribute="else">
+                   <lightning:layoutItem class="slds-align_absolute-center" flexibility="auto" padding="around-small">
+                        <ui:outputText value="No Starting Classes found" />
+                    </lightning:layoutItem>
+                   </aura:set>
+     </aura:if>
+    
+    
+
+</aura:component>
