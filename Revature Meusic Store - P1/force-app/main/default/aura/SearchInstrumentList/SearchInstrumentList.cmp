@@ -23,7 +23,7 @@ Controller is an apex class -->
                                  label="Instrument Search"
                                  value="{!v.searchKeyword}"
                                  placeholder="Search Instruments"
-                                 onChange="{!c.searchMusicProduct}" />
+                                 onchange="{!c.searchMusicProduct}" />
             </lightning:layoutItem>
         </lightning:layout>
         

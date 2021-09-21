@@ -10,7 +10,7 @@ public class SearchInstrumentListController {
         List<Music_Product__c> returnList = new List<Music_Product__c>();
         
         // If search value is null then return all music products. Else search 
-        String searchKey = String.isBlank(searchKeyword) ? '%%' : '$' + searchKeyword + '%';
+        String searchKey = String.isBlank(searchKeyword) ? '%%' : searchKeyword + '%';
         
         returnList = [SELECT Id,
                              Name,
