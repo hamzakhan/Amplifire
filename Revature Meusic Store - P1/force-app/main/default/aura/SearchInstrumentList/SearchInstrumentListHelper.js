@@ -21,7 +21,7 @@
             // Check whether call method was successful or not
             if (state === "SUCCESS") {
             	// set values to our attribute
-            	component.set("v.musicInstruments", reponse.getReturnValue());
+            	component.set("v.musicInstruments", response.getReturnValue());
             } else {
             	alert("An error occurred while fetching the data");
             }
