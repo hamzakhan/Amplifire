@@ -7,6 +7,14 @@
   ],
   "name": "P1Amp",
   "namespace": "",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "sfdcLoginUrl": "https://resourceful-narwhal-vv3fnx-dev-ed.my.salesforce.com/",
+=======
+  "sfdcLoginUrl": "https://curious-hawk-7y207l-dev-ed.my.salesforce.com/",
+>>>>>>> AormsonP2
+=======
   "sfdcLoginUrl": "https://playful-impala-l4v4ef-dev-ed.my.salesforce.com/",
+>>>>>>> origin/JohnnyP2
   "sourceApiVersion": "52.0"
 }
