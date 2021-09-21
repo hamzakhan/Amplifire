@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="instruments" type="Music_Product__c" />
+        <lightning:button class="tile">
+            <!-- Image -->
+            <div style="{!'background-image: url(\'' + v.instruments.Product_Image__c + '\')'}" class="innertile">
+              <div class="lower-third">
+               <h1 class="slds-truncate">{!v.instruments.Product_Image__c}</h1>
+              </div>
+            </div>
+        </lightning:button>
+</aura:component>

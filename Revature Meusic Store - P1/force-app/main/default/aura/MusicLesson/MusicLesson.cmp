@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+<lightning:card title="Advanced Search" class="slds-m-top_10px" >
+    <c:PopularSearch />
+</lightning:card>    
+<lightning:card title="Music Classes Offered" >
+     <c:MusicClasses /> 
+</lightning:card>
+
+
+</aura:component>

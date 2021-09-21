@@ -5,7 +5,6 @@
     <description>Does the account play any woodwind instruments?</description>
     <externalId>false</externalId>
     <label>Woodwind Instruments</label>
-    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>
 </CustomField>
